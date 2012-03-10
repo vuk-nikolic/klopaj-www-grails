@@ -1,0 +1,19 @@
+
+.idea/
+target/
+out/
+
+# OS X generated files
+.DS_Store
+
+# From github: https://github.com/github/gitignore/blob/master/Grails.gitignore
+*.iws
+*Db.properties
+*Db.script
+.settings
+eclipse
+stacktrace.log
+target
+/plugins
+/web-app/plugins
+/web-app/WEB-INF/classes
