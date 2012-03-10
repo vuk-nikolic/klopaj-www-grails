@@ -1,4 +1,6 @@
 package com.klopaj
+
+import org.hibernate.envers.Audited
 /**
  * The Tag entity.
  *
@@ -14,14 +16,14 @@ class Tag {
          pePoiDataList column:'tag_id',joinTable:'pe_poi_tag'
          id generator:'identity', column:'TAG_ID'
     }
-    String name
-    String description
-    String imageUrl
-    Date datetime
+    @Audited String name
+    @Audited String description
+    @Audited String imageUrl
+    @Audited Date datetime
     Integer version
-    String tagType
+    @Audited String tagType
 
-    static hasMany = [ pePoiDataList : Poi ]
+    static hasMany = [ pePoiDataList : Poi ] // TODO How to annotate this relationship?
 
     static belongsTo = [  Poi ]
 

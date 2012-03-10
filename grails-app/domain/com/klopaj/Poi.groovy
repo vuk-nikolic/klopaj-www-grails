@@ -1,4 +1,6 @@
 package com.klopaj
+
+import org.hibernate.envers.Audited
 /**
  * The Poi entity.
  *
@@ -16,23 +18,23 @@ class Poi {
          userIdRjUser column:'user_id'
     }
     Integer version
-    String name
-    String address
-    String description
-    Byte actref
-    Date datetime
-    String contactTel1
-    String contactTel2
-    String contactEmail
-    String contactWww
-    String contactFax
-    Double latitude
-    Double longitude
-    Integer logoId
+    @Audited String name
+    @Audited String address
+    @Audited String description
+    @Audited Byte actref
+    @Audited Date datetime
+    @Audited String contactTel1
+    @Audited String contactTel2
+    @Audited String contactEmail
+    @Audited String contactWww
+    @Audited String contactFax
+    @Audited Double latitude
+    @Audited Double longitude
+    Integer logoId // TODO: This should be a reference to Photo, and not it's id!
     // Relation
     User userIdRjUser
 
-    static hasMany = [ peTagList : Tag ]
+    static hasMany = [ peTagList : Tag ] // TODO How to annotate this relationship?
 
     static constraints = {
         version(max: 2147483647)
