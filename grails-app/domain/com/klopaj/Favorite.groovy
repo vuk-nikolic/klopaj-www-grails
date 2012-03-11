@@ -12,21 +12,21 @@ class Favorite {
          // version is set to false, because this isn't available by default for legacy databases
          version false
          id generator:'identity', column:'FAVORITE_ID'
-         userIdRjUser column:'USER_ID'
-         poiDataIdPePoiData column:'POI_DATA_ID'
+         user column:'USER_ID'
+         poi column:'POI_DATA_ID'
     }
     Date datetime
     Integer version
     // Relation
-    User userIdRjUser
+    User user
     // Relation
-    Poi poiDataIdPePoiData
+    Poi poi
 
     static constraints = {
         datetime()
         version(max: 2147483647)
-        userIdRjUser()
-        poiDataIdPePoiData()
+        user()
+        poi()
     }
     String toString() {
         return "${id}"

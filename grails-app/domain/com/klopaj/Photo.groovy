@@ -18,7 +18,7 @@ class Photo {
     String description
     Date datetime
     Long userId
-    Integer poiDataId
+    Integer poiDataId  // TODO: This should be a reference to Poi, and not it's id!
     String extension
     Boolean logo
 

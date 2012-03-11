@@ -18,7 +18,7 @@ class CommentVote {
     }
     Integer version
     // Relation
-    PeVoteValue valuePeVoteValue
+    VoteValue valuePeVoteValue
     // Relation
     User userIdRjUser
     // Relation

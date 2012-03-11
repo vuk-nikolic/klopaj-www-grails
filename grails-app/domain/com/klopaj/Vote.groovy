@@ -1,32 +1,36 @@
 package com.klopaj
 /**
- * The FollowingUser entity.
+ * The Vote entity.
  *
  * @author  Vuk  klopaj.com
  *
  *
  */
-class FollowingUser {
+class Vote {
     static mapping = {
-         table 'pe_following_user'
+         table 'pe_vote'
          // version is set to false, because this isn't available by default for legacy databases
          version false
-         id generator:'identity', column:'FOLLOWING_USER_ID'
+         id generator:'identity', column:'VOTE_ID'
          user column:'USER_ID'
-         followedUser column:'FOLLOWED_USER_ID'
+         poi column:'POI_DATA_ID'
+         voteValue column:'VALUE'
     }
     Date datetime
     Integer version
     // Relation
     User user
     // Relation
-    User followedUser
+    Poi poi
+    // Relation
+    VoteValue voteValue
 
     static constraints = {
         datetime()
         version(max: 2147483647)
         user()
-        followedUser()
+        poi()
+        voteValue()
     }
     String toString() {
         return "${id}"

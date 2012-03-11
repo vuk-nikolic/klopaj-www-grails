@@ -12,25 +12,25 @@ class Comment {
          // version is set to false, because this isn't available by default for legacy databases
          version false
          id generator:'identity', column:'COMMENT_ID'
-         userIdRjUser column:'USER_ID'
-         poiDataIdPePoiData column:'POI_DATA_ID'
+         user column:'USER_ID'
+         poi column:'POI_DATA_ID'
     }
     String text
     Integer vote
     Date datetime
     Integer version
     // Relation
-    User userIdRjUser
+    User user
     // Relation
-    Poi poiDataIdPePoiData
+    Poi poi
 
     static constraints = {
         text(size: 1..2000, blank: false)
         vote(max: 2147483647)
         datetime()
         version(max: 2147483647)
-        userIdRjUser()
-        poiDataIdPePoiData()
+        user()
+        poi()
     }
     String toString() {
         return "${id}"

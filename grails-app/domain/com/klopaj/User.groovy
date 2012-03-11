@@ -11,9 +11,9 @@ class User {
         table 'rj_user'
         // version is set to false, because this isn't available by default for legacy databases
         version false
-        rjRoleList column: 'USER_ID', joinTable: 'rj_user_role'
+        roles column: 'USER_ID', joinTable: 'rj_user_role'
         id generator: 'identity', column: 'USER_ID'
-        statusRjUserStatus column: 'STATUS'
+        userStatus column: 'STATUS'
         password column: '`hashpw`'
     }
     String locale
@@ -25,9 +25,9 @@ class User {
     String sex
     Boolean usingGravatar
     // Relation
-    UserStatus statusRjUserStatus
+    UserStatus userStatus
 
-    static hasMany = [rjRoleList: Role]
+    static hasMany = [roles: Role]
 
     static constraints = {
         username(size: 1..25, blank: false)
@@ -40,8 +40,8 @@ class User {
         email(size: 0..100)
         sex(size: 1..1, blank: false)
         usingGravatar(nullable: true)
-        statusRjUserStatus()
-        rjRoleList()
+        userStatus()
+        roles()
     }
 
     String toString() {

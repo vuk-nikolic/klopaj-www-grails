@@ -13,7 +13,7 @@ class Tag {
          table 'pe_tag'
          // version is set to false, because this isn't available by default for legacy databases
          version false
-         pePoiDataList column:'tag_id',joinTable:'pe_poi_tag'
+         pois column:'tag_id',joinTable:'pe_poi_tag'
          id generator:'identity', column:'TAG_ID'
     }
     @Audited String name
@@ -23,7 +23,7 @@ class Tag {
     Integer version
     @Audited String tagType
 
-    static hasMany = [ pePoiDataList : Poi ] // TODO How to annotate this relationship?
+    static hasMany = [ pois: Poi ] // TODO How to annotate this relationship?
 
     static belongsTo = [  Poi ]
 
@@ -34,7 +34,7 @@ class Tag {
         datetime()
         version(max: 2147483647)
         tagType(size: 1..45, blank: false)
-        pePoiDataList()
+        pois()
     }
     String toString() {
         return "${id}"
