@@ -35,7 +35,7 @@ class Poi {
     // Relation
     User user
 
-    static hasMany = [tags: Tag] // TODO How to annotate this relationship?
+    static hasMany = [tags: Tag, comments: Comment, favorites: Favorite, votes: Vote, photos: Photo] // TODO How to annotate this relationship?
 
     static constraints = {
         version(max: 2147483647)

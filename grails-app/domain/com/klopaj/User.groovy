@@ -27,7 +27,7 @@ class User {
     // Relation
     UserStatus userStatus
 
-    static hasMany = [roles: Role]
+    static hasMany = [roles: Role, comments: Comment, votes: Vote, photos: Photo, favorites: Favorite]
 
     static constraints = {
         username(size: 1..25, blank: false)
