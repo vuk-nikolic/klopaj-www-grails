@@ -4,6 +4,7 @@ import org.hibernate.envers.event.AuditEventListener;
 
 beans = {
 
+    passwordEncoder(grails.plugins.springsecurity.BCryptPasswordEncoder)
     // Add support for Envers listeners
     auditListener(AuditEventListener)
     hibernateEventListeners(HibernateEventListeners) {

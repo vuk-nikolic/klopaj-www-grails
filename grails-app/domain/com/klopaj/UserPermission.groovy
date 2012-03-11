@@ -17,9 +17,9 @@ class UserPermission {
     Integer version
     String name
 
-    static hasMany = [ rjRoleList : UserRole ]
+    static hasMany = [ rjRoleList : Role ]
 
-    static belongsTo = [  UserRole ]
+    static belongsTo = [  Role ]
 
     static constraints = {
         version(max: 2147483647)

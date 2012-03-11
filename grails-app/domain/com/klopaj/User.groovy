@@ -2,22 +2,20 @@ package com.klopaj
 /**
  * The User entity.
  *
- * @author  Vuk  klopaj.com
+ * @author Vuk  klopaj.com
  *
  *
  */
 class User {
     static mapping = {
-         table 'rj_user'
-         // version is set to false, because this isn't available by default for legacy databases
-         version false
-         rjRoleList column:'USER_ID',joinTable:'rj_user_role'
-         id generator:'identity', column:'USER_ID'
-         statusRjUserStatus column:'STATUS'
+        table 'rj_user'
+        // version is set to false, because this isn't available by default for legacy databases
+        version false
+        rjRoleList column: 'USER_ID', joinTable: 'rj_user_role'
+        id generator: 'identity', column: 'USER_ID'
+        statusRjUserStatus column: 'STATUS'
+        password column: '`hashpw`'
     }
-    Integer version
-    String username
-    String hashpw
     String locale
     Date lastLogin
     Date createTime
@@ -29,12 +27,11 @@ class User {
     // Relation
     UserStatus statusRjUserStatus
 
-    static hasMany = [ rjRoleList : UserRole ]
+    static hasMany = [rjRoleList: Role]
 
     static constraints = {
-        version(max: 2147483647)
         username(size: 1..25, blank: false)
-        hashpw(size: 0..60)
+        password(size: 0..60)
         locale(size: 0..12)
         lastLogin(nullable: true)
         createTime()
@@ -46,7 +43,37 @@ class User {
         statusRjUserStatus()
         rjRoleList()
     }
+
     String toString() {
         return "${id}"
+    }
+
+    // From Spring security plugin
+    transient springSecurityService
+
+    String username
+    String password
+    boolean enabled
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
+
+
+    Set<Role> getAuthorities() {
+        UserRole.findAllByUser(this).collect { it.role } as Set
+    }
+
+    def beforeInsert() {
+        encodePassword()
+    }
+
+    def beforeUpdate() {
+        if (isDirty('password')) {
+            encodePassword()
+        }
+    }
+
+    protected void encodePassword() {
+        password = springSecurityService.encodePassword(password)
     }
 }
