@@ -19,3 +19,7 @@ target
 /plugins
 /web-app/plugins
 /web-app/WEB-INF/classes
+
+klopaj-www-grails-grailsPlugins.iml
+
+klopaj-www-grails.iml
