@@ -2,27 +2,29 @@ package com.klopaj
 /**
  * The UserOpenid entity.
  *
- * @author  Vuk  klopaj.com
+ * @author Vuk  klopaj.com
  *
  *
  */
 class UserOpenid {
     static mapping = {
-         table 'pe_user_openid'
-         // version is set to false, because this isn't available by default for legacy databases
-         version false
-         id generator:'identity', column:'openid_id'
+        table 'pe_user_openid'
+        // version is set to false, because this isn't available by default for legacy databases
+        version false
+        id generator: 'identity', column: 'openid_id'
+        user column: 'USER_ID'
     }
     Integer version
     String openIdIdentifier
-    Long userId        // TODO: This should be a reference to Photo, and not it's id!
+    User user
 
     static constraints = {
         version(max: 2147483647)
         openIdIdentifier(size: 0..255)
-        userId(max: 9223372036854775807L)
+        user()
     }
+
     String toString() {
-        return "${openidId}" 
+        return "${openidId}"
     }
 }

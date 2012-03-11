@@ -12,23 +12,23 @@ class CommentVote {
          // version is set to false, because this isn't available by default for legacy databases
          version false
          id generator:'identity', column:'COMMENT_VOTE_ID'
-         valuePeVoteValue column:'VALUE'
-         userIdRjUser column:'USER_ID'
-         commentIdPeComment column:'COMMENT_ID'
+         voteValue column:'VALUE'
+         user column:'USER_ID'
+         comment column:'COMMENT_ID'
     }
     Integer version
     // Relation
-    VoteValue valuePeVoteValue
+    VoteValue voteValue
     // Relation
-    User userIdRjUser
+    User user
     // Relation
-    Comment commentIdPeComment
+    Comment comment
 
     static constraints = {
         version(max: 2147483647)
-        valuePeVoteValue()
-        userIdRjUser()
-        commentIdPeComment()
+        voteValue()
+        user()
+        comment()
     }
     String toString() {
         return "${id}"
