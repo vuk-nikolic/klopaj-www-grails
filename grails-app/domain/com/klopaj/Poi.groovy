@@ -12,7 +12,7 @@ class Poi {
     static mapping = {
         table 'pe_poi_data'
         // version is set to false, because this isn't available by default for legacy databases
-        version false
+        version true
         tags column: 'poi_data_id', joinTable: 'pe_poi_tag'
         id generator: 'identity', column: 'POI_DATA_ID'
         user column: 'user_id'
