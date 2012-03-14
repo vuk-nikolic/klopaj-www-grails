@@ -7,6 +7,8 @@
           <root url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/twitter-bootstrap-1.4.0.14/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/twitter-bootstrap-1.4.0.14/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/plugin-config-0.1.5/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -22,6 +24,12 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/hibernate-2.0.0" />
+    <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4/grails-app/i18n" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/hibernate-spatial-0.0.4" />
+    <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/hibernate-spatial-mysql-0.0.4" />
     <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/jquery-1.7.1">
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/i18n" isTestSource="false" />
@@ -29,6 +37,11 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12" />
+    <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/plugin-config-0.1.5">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/plugin-config-0.1.5/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/plugin-config-0.1.5/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/plugin-config-0.1.5/grails-app/i18n" isTestSource="false" />
+    </content>
     <content url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/resources-1.1.5">
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/resources-1.1.5/src/java" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/resources-1.1.5/src/groovy" isTestSource="false" />
@@ -66,6 +79,25 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernate/hibernate-envers/jars/hibernate-envers-3.6.7.Final.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-web/jars/spring-security-web-3.0.7.RELEASE.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/com.vividsolutions/jts/jars/jts-1.11.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernatespatial/hibernate-spatial/jars/hibernate-spatial-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernatespatial/hibernate-spatial-mysql/jars/hibernate-spatial-mysql-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-stempel/jars/lucene-stempel-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-smartcn/jars/lucene-smartcn-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.solr/solr-commons-csv/jars/solr-commons-csv-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-spellchecker/jars/lucene-spellchecker-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-spatial/jars/lucene-spatial-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-misc/jars/lucene-misc-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-memory/jars/lucene-memory-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-highlighter/jars/lucene-highlighter-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.solr/solr-solrj/jars/solr-solrj-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.solr/solr-core/jars/solr-core-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.solr/solr-analysis-extras/jars/solr-analysis-extras-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-analyzers/jars/lucene-analyzers-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-core/jars/lucene-core-3.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernate/hibernate-search-analyzers/jars/hibernate-search-analyzers-3.4.1.Final.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernate/hibernate-search/jars/hibernate-search-3.4.1.Final.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/xerces/xercesImpl/jars/xercesImpl-2.4.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>

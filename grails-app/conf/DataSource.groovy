@@ -34,3 +34,8 @@ environments {
         }
     }
 }
+
+/* Added by the Hibernate Spatial Plugin. */
+dataSource {
+   dialect = org.hibernatespatial.mysql.MySQLSpatialDialect
+}
