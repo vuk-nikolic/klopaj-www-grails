@@ -1,13 +1,14 @@
 package com.klopaj
 
 import org.hibernate.envers.DefaultRevisionEntity
+import com.klopaj.auditlog.CustomRevisionListener
 
 /**
  * RevisionEntity is an extended version of Envers' DefaultRevisionEntity. It hold data about the current revision
  * that will be made, and it adds user and a user that made the changed. <br />
  * It's mainly used in CustomRevisionListener, and everywhere revision needs to be gathered.
  *
- * @see com.klopaj.CustomRevisionListener
+ * @see com.klopaj.auditlog.CustomRevisionListener
  */
 @org.hibernate.envers.RevisionEntity(CustomRevisionListener.class)
 class RevisionEntity extends DefaultRevisionEntity {

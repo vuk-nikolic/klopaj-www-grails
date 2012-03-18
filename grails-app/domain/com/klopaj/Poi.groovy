@@ -14,6 +14,16 @@ import org.hibernate.search.annotations.Field
  */
 @Indexed
 class Poi {
+    public static final String FIELD_ID = "id";
+    public static final String FIELD_TAG = "tag";
+    public static final String FIELD_ADDRESS = "addr";
+    public static final String FIELD_NAME = "name";
+    public static final String FIELD_DESC = "desc";
+    public static final String FIELD_TAG_NAME = "tagname";
+
+    public static final String[] ALL_FIELDS = {FIELD_NAME; FIELD_TAG; FIELD_ADDRESS; FIELD_DESC} as String[];
+
+
     static mapping = {
         table 'pe_poi_data'
         // version is set to false, because this isn't available by default for legacy databases

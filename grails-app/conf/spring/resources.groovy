@@ -1,6 +1,7 @@
 // Place your Spring DSL code here
 import org.codehaus.groovy.grails.orm.hibernate.HibernateEventListeners
-import org.hibernate.envers.event.AuditEventListener;
+import org.hibernate.envers.event.AuditEventListener
+import com.klopaj.search.Serbian2LatinConverter;
 
 beans = {
 
@@ -15,5 +16,7 @@ beans = {
                 'pre-collection-remove': auditListener,
                 'post-collection-recreate': auditListener]
     }
+
+    serbian2LatinConverter(com.klopaj.search.Serbian2LatinConverter)
 }
 

@@ -8,10 +8,14 @@ import org.codehaus.groovy.grails.plugins.hibernate.search.HibernateSearchQueryB
 
 class SearchController {
 
+    def serbian2LatinConverter
+
     def index() {
+        def queryString = serbian2LatinConverter.convertToLatin("šta")
+
         HibernateSearchQueryBuilder queryBuilder = Poi.search()
         def result = queryBuilder.list({
-            wildcard "name", "bul*"
+            wildcard "name", queryString + "*"
         })
 
         print(result)
