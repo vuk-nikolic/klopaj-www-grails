@@ -1,7 +1,10 @@
 import com.klopaj.Poi
 import grails.converters.JSON
+import org.hibernate.search.FullTextSession
+import org.hibernate.search.Search
 
 class BootStrap {
+    def sessionFactory
 
     def init = { servletContext ->
         JSON.registerObjectMarshaller(Poi) {
@@ -31,6 +34,11 @@ class BootStrap {
 
             return returnArray
         }
+
+        // Index all data currently stored in database
+        FullTextSession fullTextSession = Search.getFullTextSession(sessionFactory.currentSession);
+        fullTextSession.createIndexer().startAndWait();
+        log.info "Hibernate-search finished indexing data from database"
     }
     def destroy = {
     }

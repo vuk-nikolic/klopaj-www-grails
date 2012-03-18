@@ -102,6 +102,7 @@
         <JAVADOC />
         <SOURCES>
           <root url="jar://$MODULE_DIR$/spring-security-core-3.0.7.RELEASE-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../sources/hibernate-search-3.4.1.Final-sources.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$USER_HOME$/.grails/2.0.0/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12/lib" recursive="false" />
       </library>

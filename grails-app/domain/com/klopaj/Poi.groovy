@@ -1,6 +1,10 @@
 package com.klopaj
 
 import org.hibernate.envers.Audited
+import org.hibernate.search.annotations.DocumentId
+import org.hibernate.search.annotations.Indexed
+import org.hibernate.search.annotations.Field
+
 /**
  * The Poi entity.
  *
@@ -8,6 +12,7 @@ import org.hibernate.envers.Audited
  *
  *
  */
+@Indexed
 class Poi {
     static mapping = {
         table 'pe_poi_data'
@@ -19,8 +24,18 @@ class Poi {
         logo column: 'logo_id'
     }
     Integer version
+
+    @DocumentId
+    @Audited
+    Long id
+
+    @Field
     @Audited String name
+
+    @Field
     @Audited String address
+
+    @Field
     @Audited String description
     @Audited Byte actref
     @Audited Date datetime
@@ -55,6 +70,12 @@ class Poi {
         user()
         tags()
     }
+
+//    static search = {
+//        name index: 'tokenized'
+//        description index: 'tokenized'
+//        address index: 'tokenized'
+//    }
 
     String toString() {
         return "${id}"

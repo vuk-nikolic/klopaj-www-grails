@@ -8,6 +8,11 @@ hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = true
     cache.provider_class = "net.sf.ehcache.hibernate.EhCacheProvider"
+
+    // hibernate search configuration:
+    search.default.directory_provider = 'filesystem'
+//    hibernate.
+    search.default.indexBase = '~/Documents/pectopah/index'
 }
 
 // environment specific settings
@@ -37,5 +42,5 @@ environments {
 
 /* Added by the Hibernate Spatial Plugin. */
 dataSource {
-   dialect = org.hibernatespatial.mysql.MySQLSpatialDialect
+    dialect = org.hibernatespatial.mysql.MySQLSpatialDialect
 }
