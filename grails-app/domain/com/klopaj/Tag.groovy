@@ -1,31 +1,42 @@
 package com.klopaj
 
 import org.hibernate.envers.Audited
+import org.hibernate.search.annotations.Field
+import org.hibernate.search.annotations.ContainedIn
+
 /**
  * The Tag entity.
  *
- * @author  Vuk  klopaj.com
+ * @author Vuk  klopaj.com
  *
  *
  */
 class Tag {
     static mapping = {
-         table 'pe_tag'
-         // version is set to false, because this isn't available by default for legacy databases
-         version false
-         pois column:'tag_id',joinTable:'pe_poi_tag'
-         id generator:'identity', column:'TAG_ID'
+        table 'pe_tag'
+        // version is set to false, because this isn't available by default for legacy databases
+        version false
+        pois column: 'tag_id', joinTable: 'pe_poi_tag'
+        id generator: 'identity', column: 'TAG_ID'
     }
-    @Audited String name
+
+    @Audited
+    Long id
+
+    @Audited @Field
+    String name
+
     @Audited String description
     @Audited String imageUrl
     @Audited Date datetime
     Integer version
     @Audited String tagType
 
-    static hasMany = [ pois: Poi ] // TODO How to annotate this relationship?
+    @ContainedIn
+    Set<Poi> pois
 
-    static belongsTo = [  Poi ]
+    static hasMany = [pois: Poi]
+    static belongsTo = [Poi]
 
     static constraints = {
         name(size: 1..255, blank: false)
@@ -36,6 +47,7 @@ class Tag {
         tagType(size: 1..45, blank: false)
         pois()
     }
+
     String toString() {
         return "${id}"
     }

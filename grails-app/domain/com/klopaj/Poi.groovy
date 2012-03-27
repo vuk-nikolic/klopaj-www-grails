@@ -1,9 +1,7 @@
 package com.klopaj
 
 import org.hibernate.envers.Audited
-import org.hibernate.search.annotations.DocumentId
-import org.hibernate.search.annotations.Indexed
-import org.hibernate.search.annotations.Field
+import org.hibernate.search.annotations.*
 
 /**
  * The Poi entity.
@@ -40,13 +38,19 @@ class Poi {
     Long id
 
     @Field
-    @Audited String name
+    @Audited
+    @Boost(3.0f)
+    String name
 
     @Field
-    @Audited String address
+    @Audited 
+    @Boost(1.5f)
+    String address
 
     @Field
-    @Audited String description
+    @Audited 
+    @Boost(0.8f)
+    String description
     @Audited Byte actref
     @Audited Date datetime
     @Audited String contactTel1
@@ -59,6 +63,10 @@ class Poi {
     @Audited Photo logo;
     // Relation
     User user
+
+    @Boost(2.0f)
+    @IndexedEmbedded
+    Set<Tag> tags;
 
     static hasMany = [tags: Tag, comments: Comment, favorites: Favorite, votes: Vote, photos: Photo] // TODO How to annotate this relationship?
 

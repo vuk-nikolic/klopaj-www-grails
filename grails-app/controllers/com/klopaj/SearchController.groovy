@@ -15,10 +15,14 @@ class SearchController {
 
         HibernateSearchQueryBuilder queryBuilder = Poi.search()
         def result = queryBuilder.list({
-            wildcard "name", queryString + "*"
+            should {
+                wildcard("name", queryString + "*")
+                wildcard("tags.name", queryString + "*")
+                wildcard("description", queryString + "*")
+                wildcard("address", queryString + "*")
+            }
         })
 
-        print(result)
         [searchResult: result]
     }
 }
