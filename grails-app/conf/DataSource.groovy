@@ -11,8 +11,6 @@ hibernate {
 
     // hibernate search configuration:
     search.default.directory_provider = 'filesystem'
-//    hibernate.
-    search.default.indexBase = '~/Documents/pectopah/index'
 }
 
 // environment specific settings
