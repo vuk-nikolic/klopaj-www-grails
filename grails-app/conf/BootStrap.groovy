@@ -38,7 +38,6 @@ class BootStrap {
         // Index all data currently stored in database
         FullTextSession fullTextSession = Search.getFullTextSession(sessionFactory.currentSession);
         fullTextSession.createIndexer().startAndWait();
-        log.info "Hibernate-search finished indexing data from database"
     }
     def destroy = {
     }
