@@ -82,6 +82,9 @@
         <SOURCES>
           <root url="jar://$MODULE_DIR$/spring-security-core-3.0.7.RELEASE-sources.jar!/" />
           <root url="jar://$MODULE_DIR$/../sources/hibernate-search-3.4.1.Final-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../sources/solr-core-3.1.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../sources/lucene-core-3.1.0-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../sources/lucene-analyzers-3.1.0-sources.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>

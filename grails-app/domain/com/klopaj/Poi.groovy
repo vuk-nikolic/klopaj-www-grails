@@ -1,27 +1,35 @@
 package com.klopaj
 
+import org.apache.solr.analysis.LowerCaseFilterFactory
+import org.apache.solr.analysis.StandardTokenizerFactory
+import org.apache.solr.analysis.StopFilterFactory
 import org.hibernate.envers.Audited
 import org.hibernate.search.annotations.*
+import org.apache.solr.analysis.ASCIIFoldingFilterFactory
 
 /**
  * The Poi entity.
  *
  * @author Vuk  klopaj.com
  *
- *
  */
+@AnalyzerDef(
+    name = "customAnalyzer",
+    tokenizer = @TokenizerDef(factory = StandardTokenizerFactory.class),
+    filters = [
+        @TokenFilterDef(factory = LowerCaseFilterFactory.class),
+        @TokenFilterDef(factory = ASCIIFoldingFilterFactory.class),
+        @TokenFilterDef(
+            factory = StopFilterFactory.class,
+            params = [
+                @Parameter(name = "words", value = "com/klopaj/search/stopwords.txt"),
+                @Parameter(name = "ignoreCase", value = "true")
+            ])
+    ]
+)
+@Analyzer(definition = "customAnalyzer")
 @Indexed
 class Poi {
-    public static final String FIELD_ID = "id";
-    public static final String FIELD_TAG = "tag";
-    public static final String FIELD_ADDRESS = "addr";
-    public static final String FIELD_NAME = "name";
-    public static final String FIELD_DESC = "desc";
-    public static final String FIELD_TAG_NAME = "tagname";
-
-    public static final String[] ALL_FIELDS = {FIELD_NAME; FIELD_TAG; FIELD_ADDRESS; FIELD_DESC} as String[];
-
-
     static mapping = {
         table 'pe_poi_data'
         // version is set to false, because this isn't available by default for legacy databases
@@ -43,12 +51,12 @@ class Poi {
     String name
 
     @Field
-    @Audited 
+    @Audited
     @Boost(1.5f)
     String address
 
     @Field
-    @Audited 
+    @Audited
     @Boost(0.8f)
     String description
     @Audited Byte actref
