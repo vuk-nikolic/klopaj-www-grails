@@ -4,18 +4,20 @@
 
 package com.klopaj.search
 
-import org.codehaus.groovy.grails.plugins.hibernate.search.HibernateSearchQueryBuilder
 import com.klopaj.Poi
+import org.apache.commons.lang.StringUtils
+import org.codehaus.groovy.grails.plugins.hibernate.search.HibernateSearchQueryBuilder
 
 class SearchService {
 
     def serbian2LatinConverter
 
     def search(String queryString) {
-        if (queryString?.isEmpty()) {
-            return new ArrayList<Poi>();
+        if (StringUtils.isBlank(queryString)) {
+            return new ArrayList<Poi>()
         }
-        queryString = serbian2LatinConverter.convertToLatin(queryString)
+
+        queryString = serbian2LatinConverter.convertToLatin(queryString.trim().toLowerCase())
 
         HibernateSearchQueryBuilder queryBuilder = Poi.search()
         def result = queryBuilder.list({
