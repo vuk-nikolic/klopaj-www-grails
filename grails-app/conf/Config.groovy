@@ -111,26 +111,3 @@ grails.gorm.default.mapping = {
    'user-type'(type:org.hibernatespatial.GeometryUserType, class:com.vividsolutions.jts.geom.Lineal)
    'user-type'(type:org.hibernatespatial.GeometryUserType, class:com.vividsolutions.jts.geom.Polygonal)
 }
-
-
-
-//### search engine ###
-//# max number of top docs
-searchEngine.maxResults=1000
-
-//# number of max results for suggest box
-searchEngine.suggestResults=5
-//# field boosters
-boost.name=3.0
-boost.tag=2.0
-boost.address=1.5
-boost.desc=0.8
-
-//# list of boosted documents: who pays it gets boosted;)
-boosted=
-
-//# min token size
-queryBuilder.minTokenSize=2
-
-//# wildcards in + and - terms
-queryBuilder.fullWildcards=true
