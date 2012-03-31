@@ -11,6 +11,8 @@
 // }
 
 
+grails.app.context = "/" // removes app name from context
+
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
@@ -41,6 +43,7 @@ grails.views.gsp.encoding = "UTF-8"
 grails.converters.encoding = "UTF-8"
 // enable Sitemesh preprocessing of GSP pages
 grails.views.gsp.sitemesh.preprocess = true
+//grails.sitemesh.default.layout = 'main'  // setting default layout
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
 
