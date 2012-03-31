@@ -14,9 +14,9 @@
                     <li><a data-toggle="modal" href="#register-modal">Registruj se</a></li>
                 </ul>
 
-                <form class="navbar-search pull-right" action="/search">
-                    <input name="query" type="text" class="search-query span3" placeholder="Search">
-                </form>
+                <g:formRemote url="[controller: 'search', action:'index']" update="searchResult" class="navbar-search pull-right" action="/search" name="search">
+                    <input name="query" type="text" class="search-query span3" placeholder="Search" />
+                </g:formRemote >
             </div><!-- /.nav-collapse -->
         </div>
     </div><!-- /navbar-inner -->
