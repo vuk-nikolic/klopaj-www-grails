@@ -1,17 +1,21 @@
 <g:javascript>
 
-    var zoomSize = 14; // default zoom size for maps
+    var zoomSize = 18; // default zoom size for maps
 
     /**
      * Shows all poi items (fromServer) on google map
      * @param fromServer
      */
-    function searchResult(fromServer) {
-        console.log(fromServer);
-    }
 
     // prepare the form when the DOM is ready
     $(document).ready(function () {
+        var mapOptions = {
+            center:new google.maps.LatLng(44.816413, 20.460158),
+            zoom:zoomSize,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var mapper = new Mapper("#navGmap", mapOptions);
+
         // bind form using ajaxForm
         $('#searchForm').ajaxForm({
             // dataType identifies the expected content type of the server response
@@ -19,26 +23,12 @@
 
             // success identifies the function to invoke when the server response
             // has been received
-            success:searchResult
+            success:mapper.showSearchResults
         });
 
         // create map after a small delay, so other parts of the page can be loaded
         setTimer(500, function () {
-            var mapOptions = {
-                center:new google.maps.LatLng(44.816413, 20.460158),
-                zoom:zoomSize,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-
-            map = new google.maps.Map($("#navGmap")[0], mapOptions);
-
-            // centers map to user's current location
-            showMyLocation();
-
-            // when map bounds change, do the boundarySearch
-            google.maps.event.addListener(map, 'bounds_changed', function () {
-                boundarySearch(map);
-            });
+            mapper.boundarySearch();
         });
 
 
