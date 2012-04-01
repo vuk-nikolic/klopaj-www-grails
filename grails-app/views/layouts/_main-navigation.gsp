@@ -2,6 +2,10 @@
 
     var zoomSize = 14; // default zoom size for maps
 
+    /**
+     * Shows all poi items (fromServer) on google map
+     * @param fromServer
+     */
     function searchResult(fromServer) {
         console.log(fromServer);
     }
@@ -27,10 +31,16 @@
             };
 
             map = new google.maps.Map($("#navGmap")[0], mapOptions);
+
+            // centers map to user's current location
+            showMyLocation();
+
+            // when map bounds change, do the boundarySearch
+            google.maps.event.addListener(map, 'bounds_changed', function () {
+                boundarySearch(map);
+            });
         });
 
-        // centers map to user's current location
-        showMyLocation();
 
     });
 

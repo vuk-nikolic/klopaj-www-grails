@@ -1,12 +1,39 @@
 /*
  * Copyright (c) 2012. klopaj.com
  */
+function pleaseWait(waiting) {
+   console.log("please wait " + waiting)
+}
 
 var map;
 
-
 function centerMap(map, latitude, longitude) {
     map.setCenter(new google.maps.LatLng(latitude, longitude))
+}
+
+function boundarySearch(map) {
+    if (!map) {
+        return;
+    }
+    google.maps.event.addListenerOnce(map, 'idle', function () {
+        var southWest = map.getBounds().getSouthWest();
+        var northEast = map.getBounds().getNorthEast();
+        $.ajax({
+            type:'POST',
+            url:'/search/boundaryMapSearch',
+            contentType: 'application/json',
+            data:'{"minLat":' + southWest.lat() + ',"maxLat":' + northEast.lat() + ',"minLng":' + southWest.lng() + ',"maxLng":' + northEast.lng() + "}",
+            beforeSend:function () {
+                pleaseWait(true);
+            },
+            success:function (result) {
+                pleaseWait(false);
+                searchResult(result);
+            }
+        });
+    });
+
+
 }
 
 // get current location, using GEO API
@@ -22,9 +49,7 @@ function showMyLocation() {
 function geoLocation(position) {
     currentLatitude = position.coords.latitude;
     currentLongitude = position.coords.longitude;
-//    if (currentLatitude && currentLongitude) {
-        centerMap(map, currentLatitude, currentLongitude);
-//    }
+    centerMap(map, currentLatitude, currentLongitude);
 }
 
 // TODO: Implement some message that have meaning for the user (if it is necessary)
