@@ -4,11 +4,13 @@
 
 package com.klopaj
 
+import grails.converters.JSON
+
 class SearchController {
 
     def searchService
 
     def index() {
-        [searchResult: searchService.search(params.query)]
+        render searchService.search(params.query) as JSON
     }
 }

@@ -1,0 +1,10 @@
+/*
+ * Copyright (c) 2012. klopaj.com
+ */
+
+#navGmap {
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+}

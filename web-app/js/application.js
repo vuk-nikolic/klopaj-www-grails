@@ -7,3 +7,25 @@ if (typeof jQuery !== 'undefined') {
 		});
 	})(jQuery);
 }
+
+/**
+ * Creates timer.
+ */
+function setTimer(time, func, callback) {
+    var a = {timer:setTimeout(func, time), callback:null};
+    if (callback) {
+        a.callback = callback;
+    }
+    return a;
+}
+
+/**
+ * Clears timer.
+ */
+function clearTimer(a) {
+    clearTimeout(a.timer);
+    if (a.callback) {
+        a.callback();
+    }
+    return this;
+}
