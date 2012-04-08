@@ -7,7 +7,7 @@ function pleaseWait(waiting) {
 
 function Mapper(nameOfDiv, mapOptions) {
     var map = new google.maps.Map($(nameOfDiv)[0], mapOptions);
-    var thisClass = this;
+    var _this = this;
 
     var markers = [];
     var defaultIcon = '/images/marker_default.png';
@@ -68,7 +68,7 @@ function Mapper(nameOfDiv, mapOptions) {
                 },
                 success:function (result) {
                     pleaseWait(false);
-                    thisClass.showSearchResults(result);
+                    _this.showSearchResults(result);
                 }
             });
         });
@@ -78,7 +78,7 @@ function Mapper(nameOfDiv, mapOptions) {
         console.log("showSearchResult");
         var jsonResponse = $(fromServer);
         if (jsonResponse) {
-            thisClass.removeAllMarkers(); // if we have some response remove all current markers
+            _this.removeAllMarkers(); // if we have some response remove all current markers
             activeInfoWindow = null; // and also we have no active info window
         }
         jsonResponse.each(function () {
@@ -89,7 +89,7 @@ function Mapper(nameOfDiv, mapOptions) {
             poi.latitude = $(this).attr("latitude");
             poi.longitude = $(this).attr("longitude");
 
-            thisClass.createMarker(poi);
+            _this.createMarker(poi);
         });
 
     };
