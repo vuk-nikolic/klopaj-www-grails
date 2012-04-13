@@ -17,13 +17,17 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 	</bean>
 
 	<bean id="grailsConfigurator" class="org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator">
-		<constructor-arg ref="grailsApplication"/>
+		<constructor-arg>
+			<ref bean="grailsApplication" />
+		</constructor-arg>
 		<property name="pluginManager" ref="pluginManager" />
 	</bean>
 
 	<bean id="grailsResourceLoader" class="org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean" />
 
 	<bean id="characterEncodingFilter" class="org.springframework.web.filter.CharacterEncodingFilter">
-		<property name="encoding" value="utf-8"/>
+		<property name="encoding">
+			<value>utf-8</value>
+		</property>
 	</bean>
 </beans>
