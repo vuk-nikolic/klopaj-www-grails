@@ -91,8 +91,11 @@ log4j = {
            'org.codehaus.groovy.grails.plugins', // plugins
            'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
            'org.springframework',
+            'org.hibernate.search',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+
+    debug   'com.mongo'
 }
 
 // Added by the Spring Security Core plugin:

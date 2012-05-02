@@ -13,6 +13,16 @@ hibernate {
     search.default.directory_provider = 'filesystem'
 }
 
+grails {
+    mongo {
+        host = "localhost"
+        port = "27017"
+        username = "pectopah"
+        password = "pectopah!"
+        databaseName = "klopaj"
+    }
+}
+
 // environment specific settings
 environments {
     development {
@@ -33,7 +43,8 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/klopaj-www-grails_production"
+//            url = "jdbc:mysql://localhost:3306/klopaj-www-grails_production"
+            url = "jdbc:mysql://localhost:3306/pectopah"
         }
     }
 }
