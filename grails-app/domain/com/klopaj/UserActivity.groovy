@@ -1,26 +1,26 @@
 package com.klopaj
 
+import org.bson.types.ObjectId
+
 class UserActivity {
 
     static mapWith = "mongo"
 
     static mapping = {
-        id generator:'identity'
+
+        userId index: true
+        poiId index: true
     }
 
     static constraints = {
-        datetime()
-        version(max: 2147483647)
         username(nullable: true)
-        poi(nullable: true)
-        userId(unique: true)
-        poiId(unique: true)
     }
 
-    Date datetime
-    Integer version
+    ObjectId id
+
     Long userId
+
     String username
+
     Long poiId
-    String poi
 }

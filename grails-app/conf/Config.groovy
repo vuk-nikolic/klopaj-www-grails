@@ -95,7 +95,9 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 
-    debug   'com.mongo'
+    debug   'org.springframework.data.mongodb',
+            'org.grails.datasotore',
+            'com.klopaj'
 }
 
 // Added by the Spring Security Core plugin:
