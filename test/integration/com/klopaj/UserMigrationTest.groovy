@@ -19,6 +19,13 @@ class UserMigrationTest extends GroovyTestCase {
     @Test
     void testDoubleConnection() {
 
+        def legacyUsers = User.list()
+        legacyUsers.each {User user ->
+            log.info("User found with the id " + user.id)
+            log.info("This user has to move down: " + user.id)
+            user.mongo.save()
+        }
+
     }
 
 }
