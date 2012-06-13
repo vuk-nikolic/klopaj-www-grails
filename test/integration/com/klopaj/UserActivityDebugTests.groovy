@@ -5,7 +5,7 @@ import org.junit.Test
 
 import static com.mongodb.util.MyAsserts.assertNotEquals
 
-class UserActivityTests extends GroovyTestCase {
+class UserActivityDebugTests extends GroovyTestCase {
 
     static transactional = false
 
@@ -57,10 +57,6 @@ class UserActivityTests extends GroovyTestCase {
             } else if (3.equals(actual.userId)) {
                 log.info("User id=" + actual.userId + " found")
             }
-
-            status.setRollbackOnly()
         }
-
-
     }
 }
