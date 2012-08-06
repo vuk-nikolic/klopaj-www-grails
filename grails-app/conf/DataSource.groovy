@@ -10,7 +10,7 @@ hibernate {
     cache.provider_class = "net.sf.ehcache.hibernate.EhCacheProvider"
 
     // hibernate search configuration:
-    search.default.directory_provider = 'filesystem'
+//    search.default.directory_provider = 'filesystem'
 }
 
 grails {
@@ -37,7 +37,7 @@ environments {
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/klopaj-www-grails_test"
+            url = "jdbc:mysql://localhost:3306/pectopah?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8"
         }
     }
     production {
