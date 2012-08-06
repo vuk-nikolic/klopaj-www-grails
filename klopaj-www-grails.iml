@@ -61,8 +61,6 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="com.springsource.sts.grails.core.CLASSPATH_CONTAINER" level="application" />
-    <orderEntry type="library" name="grails-2.0.1" level="application" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (klopaj-www-grails)">
         <CLASSES>
@@ -73,10 +71,6 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernate/hibernate-entitymanager/jars/hibernate-entitymanager-3.6.7.Final.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/antlr/antlr/jars/antlr-2.7.6.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernate/hibernate-envers/jars/hibernate-envers-3.6.7.Final.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/xerces/xercesImpl/jars/xercesImpl-2.4.0.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/com.vividsolutions/jts/jars/jts-1.11.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernatespatial/hibernate-spatial/jars/hibernate-spatial-1.1.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.hibernatespatial/hibernate-spatial-mysql/jars/hibernate-spatial-mysql-1.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-stempel/jars/lucene-stempel-3.1.0.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.lucene/lucene-smartcn/jars/lucene-smartcn-3.1.0.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.solr/solr-commons-csv/jars/solr-commons-csv-3.1.0.jar!/" />
@@ -95,7 +89,6 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-web/jars/spring-security-web-3.0.7.RELEASE.jar!/" />
           <root url="file://$MODULE_DIR$/lib" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.liquibase/liquibase-core/jars/liquibase-core-2.0.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails/grails-datastore-web/jars/grails-datastore-web-1.0.2.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails/grails-datastore-gorm-plugin-support/jars/grails-datastore-gorm-plugin-support-1.0.2.RELEASE.jar!/" />
@@ -108,11 +101,14 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.grails/grails-datastore-gorm-test/jars/grails-datastore-gorm-test-1.0.2.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/sources/lucene-core-3.1.0-sources.jar!/" />
+        </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="klopaj-www-grails-grailsPlugins" />
+    <orderEntry type="library" name="grails-2.0.1" level="application" />
   </component>
 </module>
 

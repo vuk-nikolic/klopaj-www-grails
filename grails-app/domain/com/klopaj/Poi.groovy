@@ -28,7 +28,7 @@ import org.apache.solr.analysis.ASCIIFoldingFilterFactory
     ]
 )
 @Analyzer(definition = "customAnalyzer")
-@Indexed
+//@Indexed
 class Poi {
     static mapping = {
         table 'pe_poi_data'

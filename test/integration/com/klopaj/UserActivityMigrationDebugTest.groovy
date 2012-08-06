@@ -41,7 +41,7 @@ class UserActivityMigrationDebugTest extends GroovyTestCase {
             for (activity in activities) {
                 UserActivity.save(activity)
             }
-//            UserActivity.saveAll(activities)
+            UserActivity.saveAll(activities)
         }
 
         User.withTransaction { status ->
