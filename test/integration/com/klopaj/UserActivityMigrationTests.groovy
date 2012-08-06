@@ -9,7 +9,7 @@ import org.junit.Test
  * Date: 22.5.12.
  * Time: 21.52
  */
-class UserActivityMigrationDebugTest extends GroovyTestCase {
+class UserActivityMigrationTests extends GroovyTestCase {
 
     static transactional = false
 
