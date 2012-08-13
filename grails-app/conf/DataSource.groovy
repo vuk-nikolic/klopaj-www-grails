@@ -10,7 +10,7 @@ hibernate {
     cache.provider_class = "net.sf.ehcache.hibernate.EhCacheProvider"
 
     // hibernate search configuration:
-//    search.default.directory_provider = 'filesystem'
+    search.default.directory_provider = 'filesystem'
 }
 
 grails {

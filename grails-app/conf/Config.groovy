@@ -95,7 +95,7 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 
-    debug   'org.springframework.data.mongodb',
+    debug   'org.springframework',
             'org.grails.datasotore'
 
     debug    'com.klopaj'

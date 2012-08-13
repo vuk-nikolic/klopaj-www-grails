@@ -7,6 +7,7 @@ package com.klopaj
  *
  */
 class Vote {
+
     static mapping = {
          table 'pe_vote'
          // version is set to false, because this isn't available by default for legacy databases

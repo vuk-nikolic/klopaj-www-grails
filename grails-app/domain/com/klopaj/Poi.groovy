@@ -1,11 +1,11 @@
 package com.klopaj
 
+import org.apache.solr.analysis.ASCIIFoldingFilterFactory
 import org.apache.solr.analysis.LowerCaseFilterFactory
 import org.apache.solr.analysis.StandardTokenizerFactory
 import org.apache.solr.analysis.StopFilterFactory
 import org.hibernate.envers.Audited
 import org.hibernate.search.annotations.*
-import org.apache.solr.analysis.ASCIIFoldingFilterFactory
 
 /**
  * The Poi entity.

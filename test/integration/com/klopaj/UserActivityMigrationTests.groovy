@@ -1,7 +1,9 @@
 package com.klopaj
 
-import org.junit.Before
+import org.codehaus.groovy.grails.commons.GrailsApplication
+import org.codehaus.groovy.grails.plugins.support.aware.GrailsApplicationAware
 import org.junit.Test
+import org.springframework.context.ApplicationContext
 
 /**
  *
@@ -9,18 +11,20 @@ import org.junit.Test
  * Date: 22.5.12.
  * Time: 21.52
  */
-class UserActivityMigrationTests extends GroovyTestCase {
+class UserActivityMigrationTests extends GroovyTestCase implements GrailsApplicationAware {
 
     static transactional = false
 
-    @Before
-    void onSetUp() throws Exception {
+    static ApplicationContext context
 
-    }
+    GrailsApplication app
 
     @Test
     void migrateActivity() throws Exception {
-        User.withTransaction { status ->
+
+        UserActivity.withTransaction { status ->
+
+            transactional = true
 
             def votes = Vote.findAll()
             def favorites = Favorite.findAll()
@@ -38,18 +42,27 @@ class UserActivityMigrationTests extends GroovyTestCase {
             def activities = UserActivity.list()
             activities.addAll(activitiesOrdered)
 
-            for (activity in activities) {
-                UserActivity.save(activity)
-            }
-            UserActivity.saveAll(activities)
+            UserActivity.saveAll(activities.toArray())
+
+            final activities2 = UserActivity.list()
+
+            println activities2
         }
 
-        User.withTransaction { status ->
+        UserActivity.withTransaction { status ->
+
             def activitiesPersisted = UserActivity.findAll()
+
+            assert activitiesPersisted.size() > 0
 
             log.info(activitiesPersisted)
         }
 
     }
 
+    @Override
+    void setGrailsApplication(GrailsApplication grailsApplication) {
+
+        app = grailsApplication
+    }
 }
