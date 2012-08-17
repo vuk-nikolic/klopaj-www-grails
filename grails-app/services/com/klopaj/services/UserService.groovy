@@ -3,6 +3,7 @@ package com.klopaj.services
 import com.klopaj.Favorite
 import com.klopaj.User
 import com.klopaj.Vote
+import com.klopaj.FollowingUser
 
 interface UserService {
 
@@ -18,17 +19,17 @@ interface UserService {
     List<Vote> getVotesDown(User user)
     List<Vote> getVotesDown(int userId)
 
-    List<User> getFollowing(User user)
-    List<User> getFollowing(int userId)
+    List<FollowingUser> getFollowing(User user)
+    List<FollowingUser> getFollowing(int userId)
 
-    List<User> getFollowedBy(User user)
-    List<User> getFollowedBy(int userId)
+    List<FollowingUser> getFollowedBy(User user)
+    List<FollowingUser> getFollowedBy(int userId)
 
-    User followUser(User userToFollow)
-    User followUser(int userToFollowId)
+    FollowingUser followUser(User userToFollow)
+    FollowingUser followUser(int userToFollowId)
 
-    User unfollowUser(User userToFollow)
-    User unfollowUser(int userToFollowId)
+    FollowingUser unfollowUser(User userToFollow)
+    FollowingUser unfollowUser(int userToFollowId)
 
      // ------- Activities
     // TODO: This should be defined, because there are different approaches for "mongo" and "sql" implementations

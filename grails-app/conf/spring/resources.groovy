@@ -4,6 +4,7 @@
 import com.klopaj.services.sql.SqlSearchService
 import org.codehaus.groovy.grails.orm.hibernate.HibernateEventListeners
 import org.hibernate.envers.event.AuditEventListener
+import com.klopaj.services.sql.SqlPoiService
 
 beans = {
 
@@ -20,5 +21,7 @@ beans = {
     }
 
     searchService(SqlSearchService)
+    userService(SqlSearchService)
+    poiService(SqlPoiService)
 }
 
