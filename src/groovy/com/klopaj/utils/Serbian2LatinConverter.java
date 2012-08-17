@@ -2,7 +2,7 @@
  * Copyright (c) 2012. klopaj.com
  */
 
-package com.klopaj.search;
+package com.klopaj.utils;
 
 /**
  * Serbian to Latin converter.

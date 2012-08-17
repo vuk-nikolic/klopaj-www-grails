@@ -1,7 +1,9 @@
 // Place your Spring DSL code here
+
+
+import com.klopaj.services.sql.SqlSearchService
 import org.codehaus.groovy.grails.orm.hibernate.HibernateEventListeners
 import org.hibernate.envers.event.AuditEventListener
-import com.klopaj.search.Serbian2LatinConverter;
 
 beans = {
 
@@ -17,6 +19,6 @@ beans = {
                 'post-collection-recreate': auditListener]
     }
 
-    serbian2LatinConverter(com.klopaj.search.Serbian2LatinConverter)
+    searchService(SqlSearchService)
 }
 

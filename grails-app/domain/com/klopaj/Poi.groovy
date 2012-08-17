@@ -22,7 +22,7 @@ import org.hibernate.search.annotations.*
         @TokenFilterDef(
             factory = StopFilterFactory.class,
             params = [
-                @Parameter(name = "words", value = "com/klopaj/search/stopwords.txt"),
+                @Parameter(name = "words", value = "com/klopaj/services/search/stopwords.txt"),
                 @Parameter(name = "ignoreCase", value = "true")
             ])
     ]

@@ -2,18 +2,20 @@
  * Copyright (c) 2012. klopaj.com
  */
 
-package com.klopaj.search
+package com.klopaj.services.sql
 
-import com.klopaj.Poi
 import org.apache.commons.lang.StringUtils
+import com.klopaj.Poi
 import org.codehaus.groovy.grails.plugins.hibernate.search.HibernateSearchQueryBuilder
+import com.klopaj.services.SearchService
+import com.klopaj.utils.Serbian2LatinConverter
 
 /**
- * SearchService implements all search-related action for the application such as query string search as well as a map-boundary search.
+ * This implementation of SearchService uses database queries (mostly hibernate search).
  */
-class SearchService {
+class SqlSearchService implements SearchService {
 
-    def serbian2LatinConverter
+
 
     /**
      * Performs query string base search.<br />
@@ -29,6 +31,7 @@ class SearchService {
             return new ArrayList<Poi>()
         }
 
+        def serbian2LatinConverter = new Serbian2LatinConverter()
         queryString = serbian2LatinConverter.convertToLatin(queryString.trim().toLowerCase())
 
         HibernateSearchQueryBuilder queryBuilder = Poi.search()
