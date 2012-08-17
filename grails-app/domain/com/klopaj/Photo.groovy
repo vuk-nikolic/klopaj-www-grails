@@ -14,6 +14,7 @@ class Photo {
         id generator: 'identity', column: 'photo_id'
         user column: 'USER_ID'
         poi column: 'POI_DATA_ID'
+        client column: 'client_id'
     }
     Integer version
     String filename
@@ -23,6 +24,8 @@ class Photo {
     User user
     // Relation
     Poi poi
+    // Relation
+    Client client
     String extension
     Boolean logo
 

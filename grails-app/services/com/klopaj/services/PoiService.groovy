@@ -16,12 +16,18 @@ interface PoiService {
     Vote voteDown(Poi poi, Client client)
     Vote voteDown(int poiId, int clientId)
 
+    List<Vote> getVotes(Poi poi)
+    List<Vote> getVotes(int poiId)
+
     // ----- Follow/unfollow poi
     Favorite follow(Poi poi, Client client)
     Favorite follow(int poiId, int clientId)
 
     Favorite unfollow(Poi poi, Client client)
     Favorite unfollow(int poiId, int clientId)
+
+    List<Favorite> getFavorites(Poi poi)
+    List<Favorite> getFavorites(int poiId)
 
     // ------ Comment related (CRUD)
     List<Comment> getComments(Poi poi);
