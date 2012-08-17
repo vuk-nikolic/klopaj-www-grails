@@ -4,10 +4,10 @@
     <facet type="web" name="GrailsWeb">
       <configuration>
         <webroots>
-          <root url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/web-app" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/grails-app/views" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/hibernate-search-0.4/web-app" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/jquery-1.7.1/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -23,44 +23,44 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/hibernate-2.0.1" />
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/hibernate-search-0.4">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/hibernate-search-0.4/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/hibernate-search-0.4/grails-app/i18n" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/hibernate-2.1.0">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/hibernate-2.1.0/grails-app/i18n" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/hibernate-spatial-0.0.4" />
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/hibernate-spatial-mysql-0.0.4" />
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/jquery-1.7.1">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/jquery-1.7.1/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/taglib" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/hibernate-search-0.4/grails-app/i18n" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/mongodb-1.0.0.RC4" />
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12" />
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/resources-1.1.5">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/resources-1.1.5/src/java" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/resources-1.1.5/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/resources-1.1.5/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/resources-1.1.5/grails-app/taglib" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/jquery-1.7.1">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/jquery-1.7.1/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/src/java" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/grails-app/taglib" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/mongodb-1.0.0.RC4" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/resources-1.1.5">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/resources-1.1.5/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/resources-1.1.5/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/resources-1.1.5/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/resources-1.1.5/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/svn-1.0.2">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/svn-1.0.2/src/groovy" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/spring-security-core-1.2.7.2/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/tomcat-2.0.1" />
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/grails-app/taglib" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/svn-1.0.2">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/svn-1.0.2/src/groovy" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/webxml-1.4.1">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/tomcat-2.1.0" />
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/twitter-bootstrap-2.0.0.16/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/webxml-1.4.1">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -109,7 +109,7 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.tmatesoft.sqljet/sqljet/jars/sqljet-1.0.4.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.tmatesoft.svnkit/trilead-ssh2/jars/trilead-ssh2-build213-svnkit-1.3-patch.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.tmatesoft.svnkit/svnkit/jars/svnkit-1.3.5.jar!/" />
-          <root url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12/lib" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -119,7 +119,7 @@
           <root url="jar://$USER_HOME$/sources/lucene-core-3.1.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/sources/lucene-analyzers-3.1.0-sources.jar!/" />
         </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/.grails/2.0.1/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12/lib" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/.grails/2.1.0/projects/klopaj-www-grails/plugins/mysql-connectorj-5.1.12/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
