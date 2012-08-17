@@ -15,7 +15,7 @@ class CustomRevisionListener implements RevisionListener {
     def springSecurityService
 
     void newRevision(Object o) {
-        RevisionEntity revisionEntity = (RevisionEntity) revisionEntity;
+        RevisionEntity revisionEntity = (RevisionEntity) o;
 
         User user = User.get(springSecurityService.principal.id);
         if (user != null) {
