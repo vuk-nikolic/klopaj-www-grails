@@ -44,4 +44,19 @@ interface PoiService {
 
     // ------- Activities
     // TODO: This should be defined, because there are different approaches for "mongo" and "sql" implementations
+
+    /**
+     * Returns activities on "global" level, so for every poi, user etc
+     * @param page number of the page is requested
+     * @return
+     */
+    def getLatestActivities(int page)
+
+    /**
+     * Returns latest activities for selected poi, and page
+     * @param poi
+     * @param page
+     * @return
+     */
+    def getLatestPoiActivities(Poi poi, int page)
 }

@@ -181,4 +181,12 @@ class SqlPoiService implements PoiService {
         Poi poi = Poi.findById(poiId)
         return poi.getPhotos()
     }
+
+    def getLatestActivities(int page) {
+        return null  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    def getLatestPoiActivities(Poi poi, int page) {
+        return null  //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
