@@ -13,9 +13,11 @@ import com.klopaj.Comment
 import com.klopaj.Photo
 import com.klopaj.VoteValue
 import com.klopaj.User
+import com.klopaj.UserContent
 
 class SqlPoiService implements PoiService {
     def springSecurityService
+    Integer PAGE_SIZE = 8
 
     User getCurrentUser() {
         return User.get(springSecurityService.principal.id)
@@ -183,10 +185,13 @@ class SqlPoiService implements PoiService {
     }
 
     def getLatestActivities(int page) {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+        def offset = page * PAGE_SIZE
+        return UserContent.list(offset: offset, max: PAGE_SIZE)
     }
 
     def getLatestPoiActivities(Poi poi, int page) {
-        return null  //To change body of implemented methods use File | Settings | File Templates.
+        def offset = page * PAGE_SIZE
+        return UserContent.findAll(poi.getId().toString(), [offset: offset, max: PAGE_SIZE]);
+//        .list(offset: offset, max: PAGE_SIZE)
     }
 }
