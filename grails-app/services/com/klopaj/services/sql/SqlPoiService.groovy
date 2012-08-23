@@ -84,12 +84,12 @@ class SqlPoiService implements PoiService {
         return vote.save()
     }
 
-    List<Vote> getVotes(Poi poi) {
+    List<Vote> getVotes(Poi poi, int page) {
         // TODO: Maybe we should add paging here
         return poi.getVotes()
     }
 
-    List<Vote> getVotes(int poiId) {
+    List<Vote> getVotes(int poiId, int page) {
         // TODO: Maybe we should add paging here
         Poi poi = Poi.findById(poiId)
         return poi.getVotes()
@@ -127,23 +127,23 @@ class SqlPoiService implements PoiService {
         return favorite.delete()
     }
 
-    List<Comment> getComments(Poi poi) {
+    List<Comment> getComments(Poi poi, int page) {
         // TODO: Maybe we should add paging here
         return poi.getComments()
     }
 
-    List<Comment> getComments(int poiId) {
+    List<Comment> getComments(int poiId, int page) {
         // TODO: Maybe we should add paging here
         Poi poi = Poi.findById(poiId)
         return poi?.getComments()
     }
 
-    List<Favorite> getFavorites(Poi poi) {
+    List<Favorite> getFavorites(Poi poi, int page) {
         // TODO: Maybe we should add paging here
         return poi.getFavorites()
     }
 
-    List<Favorite> getFavorites(int poiId) {
+    List<Favorite> getFavorites(int poiId, int page) {
         // TODO: Maybe we should add paging here
         Poi poi = Poi.findById(poiId)
         return poi.getFavorites()
@@ -173,25 +173,27 @@ class SqlPoiService implements PoiService {
         return null  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    List<Photo> getPhotos(Poi poi) {
+    List<Photo> getPhotos(Poi poi, int page) {
         // TODO: Maybe we should add paging here
         return poi.getPhotos()
     }
 
-    List<Photo> getPhotos(int poiId) {
+    List<Photo> getPhotos(int poiId, int page) {
         // TODO: Maybe we should add paging here
         Poi poi = Poi.findById(poiId)
         return poi.getPhotos()
     }
 
     def getLatestActivities(int page) {
-        def offset = page * PAGE_SIZE
-        return UserContent.list(offset: offset, max: PAGE_SIZE)
+        return UserContent.list(offset: calculateOffset(page), max: PAGE_SIZE)
     }
 
     def getLatestPoiActivities(Poi poi, int page) {
-        def offset = page * PAGE_SIZE
-        return UserContent.findAll(poi.getId().toString(), [offset: offset, max: PAGE_SIZE]);
-//        .list(offset: offset, max: PAGE_SIZE)
+        return UserContent.findAll(poi.getId().toString(), [offset: calculateOffset(page), max: PAGE_SIZE]);
+    }
+
+    // ---- Private methods:
+    private int calculateOffset(int page) {
+        page * PAGE_SIZE
     }
 }
