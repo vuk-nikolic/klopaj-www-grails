@@ -5,15 +5,7 @@
 package com.klopaj.services.sql
 
 import com.klopaj.services.PoiService
-import com.klopaj.Poi
-import com.klopaj.Vote
-import com.klopaj.Client
-import com.klopaj.Favorite
-import com.klopaj.Comment
-import com.klopaj.Photo
-import com.klopaj.VoteValue
-import com.klopaj.User
-import com.klopaj.UserContent
+import com.klopaj.*
 
 class SqlPoiService implements PoiService {
     def springSecurityService
@@ -192,7 +184,34 @@ class SqlPoiService implements PoiService {
         return UserContent.findAll(poi.getId().toString(), [offset: calculateOffset(page), max: PAGE_SIZE]);
     }
 
-    // ---- Private methods:
+    /**
+     * Returns most commented pois.
+     */
+    def getMostCommentedPois(int count) {
+        return Poi.executeQuery("select comm.poi, count(comm.user) from Comment comm group by comm.poi order by count(comm.user) desc")}
+
+
+    def getHighestRatedPois(int page) {
+
+        return Poi.executeQuery("select v.poi, count(*) from Vote v where v.voteValue.voteValueId=1 group by v.poi.id order by count(*) desc")
+    }
+
+    def getSimilarPoiList(Poi poi, int page) {
+        // TODO: Implement :)
+        return null  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    def getFeaturedPoiList() {
+        List<Tag> tags = Tag.executeQuery("from Tag order by rand()", [max: Tag.count()])
+        Tag tag = tags.get(0);
+        return tag.getPois()  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    def getFeaturedPoiListForPoi(Poi poi) {
+        // TODO: Implement :)
+        return null  //To change body of implemented methods use File | Settings | File Templates.
+    }
+// ---- Private methods:
     private int calculateOffset(int page) {
         page * PAGE_SIZE
     }

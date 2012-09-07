@@ -35,28 +35,32 @@
     });
 
 </g:javascript>
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="${createLink(uri: '/')}">klopaj!</a>
+    <div class="row-fluid">
+        <div class="span1 offset2">
+            <a class="brand" href="${createLink(uri: '/')}"><img src="/img/logo.jpg"> </a>
 
-            <div class="nav-collapse">
-                <ul class="nav">
-                    <li><a data-toggle="modal" href="#login-modal">Prijavi se</a></li>
-                    <li><a data-toggle="modal" href="#register-modal">Registruj se</a></li>
-                </ul>
-
-                <form action="/search" id="searchForm" method="post" class="navbar-search pull-right">
-                    <input name="query" type="text" class="search-query span3" placeholder="Search"/>
-                </form>
-            </div><!-- /.nav-collapse -->
         </div>
-    </div><!-- /navbar-inner -->
-    <div id="navGmap"></div>
+        <ul class="span2 offset5 nav nav-tabs">
+            <li><a data-toggle="modal" href="#login-modal">PRIJAVI SE!</a></li>
+            <li><a data-toggle="modal" href="#register-modal">REGISTRUJ SE!</a></li>
+        </ul>
+        <div class="span2"></div>
+    </div>
+
+
+
+<div class="container">
+
+    <div class="row-fluid" style="position: relative;">
+        <!-- TODO: Add a floating div above gmap -->
+        %{--<div style="position: absolute; z-index: 999; top: -20px; left: 80px; width: 840px;background-color: #fff">--}%
+                %{--<form action="/search" id="searchForm" method="post" class="pull-right">--}%
+                    %{--<input name="query" type="text" class="search-query" placeholder="Search"/>--}%
+                %{--</form>--}%
+            %{--</div>--}%
+        <div id="navGmap"></div>
+    </div>
+
+
 </div>
 

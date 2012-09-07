@@ -9,13 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><g:layoutTitle default="Service Support"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-    <r:require modules="bootstrap"/>
+    <link rel="shortcut icon" href="${resource(dir: 'img', file: 'favicon.ico')}" type="image/x-icon">
     <g:javascript library="jquery"/>
     <g:layoutHead/>
     <r:layoutResources/>
-
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'twitter.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
     <script type="text/javascript" src="${resource(dir: 'js', file: 'domain/poi.js')}"></script>
     <script type="text/javascript" src="${resource(dir: 'js', file: 'application.js')}"></script>
@@ -27,19 +24,21 @@
 </head>
 
 <body>
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'thirdparty/bootstrap.min.js')}"></script>
+    <g:render template="/layouts/main-navigation"/>
 
-<g:render template="/layouts/main-navigation"/>
+    %{--<div id="searchResult"></div>--}%
+    <div class="container">
+        <g:layoutBody/>
+    </div>
 
-<div id="searchResult"></div>
-<g:layoutBody/>
+    <div class="footer" role="contentinfo"></div>
 
-<div class="footer" role="contentinfo"></div>
+    <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 
-<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+    <r:layoutResources/>
 
-<r:layoutResources/>
-
-<g:render template="/layouts/login-modal"/>
-<g:render template="/layouts/register-modal"/>
+    <g:render template="/layouts/login-modal"/>
+    <g:render template="/layouts/register-modal"/>
 </body>
 </html>

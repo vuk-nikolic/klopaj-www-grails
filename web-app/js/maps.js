@@ -10,8 +10,8 @@ function Mapper(nameOfDiv, mapOptions) {
     var _this = this;
 
     var markers = [];
-    var defaultIcon = '/images/marker_default.png';
-    var inactiveIcon = '/images/marker_inactive.png';
+    var defaultIcon = '/img/marker_default.png';
+    var inactiveIcon = '/img/marker_inactive.png';
     var activeInfoWindow;
 
     this.createMarker = function createMarker(poi) {

@@ -1,12 +1,62 @@
 /*
- * Copyright (c) 2012. klopaj.com
+    klopaj.com  style.css - Here we'll put all additional CSS that is not related to bootstrap.
  */
 
+@import url(/css/bootstrap-customization.css);
+
+/* Main map style */
 #navGmap {
-    width: 100%;
-    height: 180px;
-    border-bottom: 1px solid #999;
-    border-top: 1px solid #999;
+    height: 320px;
 }
 
-#navGmap img { max-width: none; }
+#navGmap img {
+    max-width: none;
+}
+
+/* News feed */
+.newsfeed-header {
+    font-size: 19px;
+    font-weight: bolder;
+    min-height: 25px;
+    border-bottom: 1px solid #DAD3CC;
+    padding-top: 19px;
+}
+
+.newsfeed-row {
+    font-size: 14px;
+    min-height: 50px;
+    border-bottom: 1px solid #DAD3CC;
+}
+
+/* Sidebar */
+.sidebar-header {
+    font-size: 19px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    min-height: 25px;
+    border-bottom: 1px solid #DAD3CC;
+    padding-top: 19px;
+}
+
+.sidebar-row {
+    background-image: url('/img/sidebar-arrow.png');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: right;
+    font-size: 14px;
+    min-height: 50px;
+    border-bottom: 1px solid #DAD3CC;
+}
+
+.sidebar-row-image {
+    padding-top: 10px
+}
+
+.sidebar-row-text-content {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sidebar-row-title {
+    font-weight: bolder;
+}
