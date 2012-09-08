@@ -26,8 +26,32 @@
     font-size: 14px;
     min-height: 50px;
     border-bottom: 1px solid #DAD3CC;
+    padding:10px 0 10px 0;
 }
 
+.newsfeed-row-image {
+    text-align: right;
+    position: relative;
+}
+
+.newsfeed-row-image-plus-overlay {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    z-index:10;
+}
+
+.newsfeed-row-comment {
+    background-color: #BDB9B3;
+    width:98%;
+    min-height: 30px;
+    padding-top:10px;
+    padding-left:10px;
+
+    -webkit-border-radius:6px 6px 6px 6px;
+    -moz-border-radius:6px 6px 6px 6px;
+    border-radius:6px 6px 6px 6px
+}
 /* Sidebar */
 .sidebar-header {
     font-size: 19px;

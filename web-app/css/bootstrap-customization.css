@@ -9,3 +9,7 @@
     background-color: #F9F8F6;
     padding-top: 0; /* sidebar header will have a padding at top */
 }
+
+a, a:hover {
+    color: #F04E23;
+}
