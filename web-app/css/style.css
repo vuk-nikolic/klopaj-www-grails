@@ -5,12 +5,24 @@
 @import url(/css/bootstrap-customization.css);
 
 /* Main map style */
+.mapContainer {
+    margin-bottom: 15px;
+}
 #navGmap {
     height: 320px;
 }
 
 #navGmap img {
     max-width: none;
+}
+
+#showHideMap {
+    position: absolute;
+    z-index: 999;
+    bottom: -12px;
+    right: 460px;
+    width: 48px;
+    background-color: #fff
 }
 
 /* News feed */

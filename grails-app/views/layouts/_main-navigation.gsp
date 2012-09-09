@@ -49,7 +49,7 @@
 
 
 
-<div class="container">
+<div class="container mapContainer">
 
     <div class="row-fluid" style="position: relative;">
         <!-- TODO: Add a floating div above gmap -->
@@ -58,6 +58,7 @@
                     %{--<input name="query" type="text" class="search-query" placeholder="Search"/>--}%
                 %{--</form>--}%
             %{--</div>--}%
+        <div id="showHideMap"><img src="/img/arrow-up.png" alt="Smanji mapu"></div>
         <div id="navGmap"></div>
     </div>
 
