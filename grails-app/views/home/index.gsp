@@ -38,7 +38,23 @@
                         </div>
                     </g:if>
                     <g:elseif test="${activity.type == 'vote'}">
-                        vote: ${activity.value}
+                        <span class="span10">
+                            <g:if test="${activity.value == 1}">
+                                Voli
+                            </g:if>
+                            <g:else>
+                                Ne voli
+                            </g:else>
+                            restoran <g:link controller="poi" action="show" id="${activity.poiId}">${activity.poiName}</g:link>
+                        </span>
+                        <span class="span2 newsfeed-row-image">
+                            <g:if test="${activity.value == 1}">
+                                <img src="/img/like.png" alt="${activity.username}">
+                            </g:if>
+                            <g:else>
+                                <img src="/img/unlike.png" alt="${activity.username}">
+                            </g:else>
+                        </span>
                     </g:elseif>
                     <g:elseif test="${activity.type == 'photo'}">
                         <span class="span10">
@@ -51,18 +67,23 @@
                             sliku za restoran <g:link controller="poi" action="show" id="${activity.poiId}">${activity.poiName}</g:link>
                         </span>
                         <span class="span2 newsfeed-row-image">
-                            <img src="/img/plus-12px.png" class="newsfeed-row-image-plus-overlay">
+                            <img src="/img/plus-12px.png" class="newsfeed-row-image-plus-overlay" alt="Povećaj">
                             <img src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05466bc.jpg?s=64&d=identicon" alt="${activity.username}">
                         </span>
                     </g:elseif>
                     <g:elseif test="${activity.type == 'poi'}">
-                        <g:if test="${activity.sex == 'M'}">
-                            Promenio
-                        </g:if>
-                        <g:else>
-                            Promenila
-                        </g:else>
-                        restoran <g:link controller="poi" action="show" id="${activity.poiId}">${activity.poiName}</g:link>
+                        <span class="span10">
+                            <g:if test="${activity.sex == 'M'}">
+                                Promenio
+                            </g:if>
+                            <g:else>
+                                Promenila
+                            </g:else>
+                            restoran <g:link controller="poi" action="show" id="${activity.poiId}">${activity.poiName}</g:link>
+                        </span>
+                        <span class="span2 newsfeed-row-image">
+                            <img src="/img/like.png" alt="${activity.username}">
+                        </span>
                     </g:elseif>
                 </span>
             </div>
