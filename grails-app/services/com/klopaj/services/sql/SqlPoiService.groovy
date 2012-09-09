@@ -204,7 +204,9 @@ class SqlPoiService implements PoiService {
     def getFeaturedPoiList() {
         List<Tag> tags = Tag.executeQuery("from Tag order by rand()", [max: Tag.count()])
         Tag tag = tags.get(0);
-        return tag.getPois()  //To change body of implemented methods use File | Settings | File Templates.
+        Set poiSet = tag.getPois()
+
+        return tag.getPois().asList().subList(0, poiSet.size() > PAGE_SIZE ? PAGE_SIZE : poiSet.size())  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     def getFeaturedPoiListForPoi(Poi poi) {
