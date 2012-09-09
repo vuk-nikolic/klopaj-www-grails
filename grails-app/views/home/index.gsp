@@ -8,7 +8,7 @@
 <body>
 <div class="row-fluid">
 
-    <div class="span8">
+    <div class="span8 main-content">
         <div class="row-fluid newsfeed-header">
             Najnovija dešavanja
         </div>

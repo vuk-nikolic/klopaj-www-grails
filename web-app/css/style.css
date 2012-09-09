@@ -26,6 +26,10 @@
 }
 
 /* News feed */
+.main-content {
+    border: 1px solid #DAD3CC;
+    padding: 10px;
+}
 .newsfeed-header {
     font-size: 19px;
     font-weight: bolder;
