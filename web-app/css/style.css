@@ -74,6 +74,11 @@
     font-size: 12px;
     color: #F04E23;
 }
+
+#loadingContainer {
+    display:none; text-align: center; padding:5px
+}
+
 /* Sidebar */
 .sidebar-header {
     font-size: 19px;

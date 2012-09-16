@@ -13,6 +13,8 @@
             Najnovija dešavanja
         </div>
        <g:render template="/layouts/newsfeed-template" bean="${activities}" />
+        <div id="loadingContainer"><img src="/img/loading_wheel_small.gif" title="Samo sekund, učitavamo"/></div>
+        <div id="moreContainer"></div>
     </div>
 
     <div class="span4">
