@@ -13,6 +13,8 @@
     <g:javascript library="jquery"/>
     <g:layoutHead/>
     <r:layoutResources/>
+    <!-- Following stylesheet is for Din Display Pro Regular font -->
+    <link rel="stylesheet" href="http://f.fontdeck.com/s/css/uH5+KWQnibDTJRYggGJ9XZLTAgw/localhost/23906.css" type="text/css" />
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
     <script type="text/javascript" src="${resource(dir: 'js', file: 'domain/poi.js')}"></script>
     <script type="text/javascript" src="${resource(dir: 'js', file: 'application.js')}"></script>

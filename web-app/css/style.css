@@ -4,10 +4,19 @@
 
 @import url(/css/bootstrap-customization.css);
 
+body {
+    font-family: "Din Display Pro Regular", Verdana, sans-serif;
+    font-size-adjust: 0.5;
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Main map style */
 .mapContainer {
     margin-bottom: 15px;
+    padding-top: 120px;
 }
+
 #navGmap {
     height: 320px;
 }
@@ -25,11 +34,52 @@
     background-color: #fff
 }
 
+.nav-login {
+    background: url('/img/login-background.png') no-repeat left bottom;
+    background-attachment: inherit;
+    padding-top: 20px;
+    height: 53px;
+    margin-left: 1px !important;
+}
+
+.nav-register {
+    background: url('/img/register-background.png') no-repeat left bottom;
+    background-attachment: inherit;
+    padding-top: 20px;
+    height: 53px;
+}
+
+.nav-login a, .nav-register a {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #000000;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.logo-divider {
+    height: 65px;
+    padding-left: 40px;
+}
+
+.navigation-header {
+    background: url('/img/navigation-background.png') repeat-x left bottom;
+    background-attachment: inherit;
+    height: 105px;
+    left: 0;
+        position: fixed;
+        right: 0;
+        top: -1px;
+    z-index: 1000;
+}
+
 /* News feed */
 .main-content {
     border: 1px solid #DAD3CC;
     padding: 10px;
 }
+
 .newsfeed-header {
     font-size: 19px;
     font-weight: bolder;
@@ -42,7 +92,7 @@
     font-size: 14px;
     min-height: 50px;
     border-bottom: 1px solid #DAD3CC;
-    padding:10px 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 
 .newsfeed-row-image {
@@ -51,22 +101,22 @@
 }
 
 .newsfeed-row-image-plus-overlay {
-    position:absolute;
+    position: absolute;
     bottom: 0;
     right: 0;
-    z-index:10;
+    z-index: 10;
 }
 
 .newsfeed-row-comment {
     background-color: #BDB9B3;
-    width:98%;
+    width: 98%;
     min-height: 30px;
-    padding-top:10px;
-    padding-left:10px;
+    padding-top: 10px;
+    padding-left: 10px;
 
-    -webkit-border-radius:6px 6px 6px 6px;
-    -moz-border-radius:6px 6px 6px 6px;
-    border-radius:6px 6px 6px 6px
+    -webkit-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px
 }
 
 .newsfeed-row-datetime {
@@ -76,7 +126,9 @@
 }
 
 #loadingContainer {
-    display:none; text-align: center; padding:5px
+    display: none;
+    text-align: center;
+    padding: 5px
 }
 
 /* Sidebar */

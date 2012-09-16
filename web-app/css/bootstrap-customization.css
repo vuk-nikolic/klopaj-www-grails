@@ -4,6 +4,18 @@
 
 @import url(/css/bootstrap.min.css);
 
+@font-face {
+    font-family: 'Din Text Pro Regular';
+    src: url('http://f.fontdeck.com/f/1/T2NlYkZYSXkAB3qRWHE+J60Def9xqd6+UpkCBJr8oJVnjBWkfyCy3ZcErMxIwXoMbWU.eot');
+    src: url('http://f.fontdeck.com/f/1/T2NlYkZYSXkAB3qRWHE+J60Def9xqd6+UpkCBJr8oJVnjBWkfyCy3ZcErMxIwXoMbWU.eot?') format('embedded-opentype'), url('http://f.fontdeck.com/f/1/T2NlYkZYSXkAB3qRWHE+J60Def9xqd6+UpkCBJr8oJVnjBWkfyCy3ZcErMxIwXoMbWU.woff') format('woff'), url('http://f.fontdeck.com/f/1/T2NlYkZYSXkAB3qRWHE+J60Def9xqd6+UpkCBJr8oJVnjBWkfyCy3ZcErMxIwXoMbWU.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Din Text Pro Regular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .well {
     border-radius: 0;
     background-color: #F9F8F6;
@@ -13,3 +25,5 @@
 a, a:hover {
     color: #F04E23;
 }
+
+

@@ -77,15 +77,18 @@
         });
     }());
 </g:javascript>
-<div class="row-fluid">
-    <div class="span1 offset2">
+<div class="row-fluid navigation-header">
+    <div class="span1"></div>
+    <div class="span2 offset1">
         <a class="brand" href="${createLink(uri: '/')}"><img src="/img/logo.jpg"></a>
-
+        <img class="logo-divider" src="/img/logo-divider.png" alt=""/>
     </div>
-    <ul class="span2 offset5 nav nav-tabs">
-        <li><a data-toggle="modal" href="#login-modal">PRIJAVI SE!</a></li>
-        <li><a data-toggle="modal" href="#register-modal">REGISTRUJ SE!</a></li>
-    </ul>
+    <div class="span6">
+        <div class="row-fluid">
+            <div class="span2 offset8 nav-register"><a data-toggle="modal" href="#register-modal">Registruj se!</a></div>
+            <div class="span2 nav-login"><a data-toggle="modal" href="#login-modal">Prijavi se!</a></div>
+        </div>
+    </div>
 
     <div class="span2"></div>
 </div>
