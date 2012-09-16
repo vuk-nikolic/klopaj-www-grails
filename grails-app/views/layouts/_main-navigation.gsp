@@ -97,12 +97,15 @@
 <div class="container mapContainer">
 
     <div class="row-fluid" style="position: relative;">
-        <!-- TODO: Add a floating div above gmap -->
-        %{--<div style="position: absolute; z-index: 999; top: -20px; left: 80px; width: 840px;background-color: #fff">--}%
-        %{--<form action="/search" id="searchForm" method="post" class="pull-right">--}%
-        %{--<input name="query" type="text" class="search-query" placeholder="Search"/>--}%
-        %{--</form>--}%
-        %{--</div>--}%
+        <div class="mapOverlay">
+            <div class="span1 map-nav-cuisine"><a href="#">Kuhinje</a></div>
+            <div class="span1 map-nav-extra"><a href="#">Dodaci</a></div>
+            <div class="span10">
+                <form action="/search" id="searchForm" method="post" class="pull-right">
+                    <input name="query" type="text" placeholder="NAĐI RESTORAN..." />
+                </form>
+            </div>
+        </div>
         <div id="showHideMap"><a href="#"><img id="mapResizeImage" src="/img/arrow-up.png" alt="Smanji mapu"></a></div>
 
         <div id="navGmap"></div>

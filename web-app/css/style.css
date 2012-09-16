@@ -14,7 +14,7 @@ body {
 /* Main map style */
 .mapContainer {
     margin-bottom: 15px;
-    padding-top: 120px;
+    padding-top: 105px;
 }
 
 #navGmap {
@@ -66,14 +66,57 @@ body {
 .navigation-header {
     background: url('/img/navigation-background.png') repeat-x left bottom;
     background-attachment: inherit;
-    height: 105px;
+    height: 90px;
     left: 0;
-        position: fixed;
-        right: 0;
-        top: -1px;
+    position: fixed;
+    right: 0;
+    top: -1px;
     z-index: 1000;
 }
 
+.map-nav-cuisine {
+    background: url('/img/map-nav-cuisine.png') no-repeat left bottom;
+    background-attachment: inherit;
+    padding-top: 10px;
+    height: 40px;
+}
+
+.map-nav-extra {
+    background: url('/img/map-nav-extra.png') no-repeat left bottom;
+    background-attachment: inherit;
+    padding-top: 10px;
+    height: 40px;
+    margin-left:1px !important;
+}
+
+.map-nav-cuisine a, .map-nav-extra a {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #000000;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.mapOverlay {
+    position: absolute;
+    z-index: 999;
+    left: 80px;
+    background-color: rgb(255, 255, 255);
+    width: 730px;
+    top: -10px;
+    padding-left:10px;
+}
+
+#searchForm {
+    margin: 0;
+    padding-right: 5px;
+}
+
+.map-nav {
+    padding-left:10px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
 /* News feed */
 .main-content {
     border: 1px solid #DAD3CC;
