@@ -31,6 +31,20 @@
             mapper.boundarySearch();
         });
 
+        var mapFullSize = true;
+        var offset;
+        var animationTime = 600;
+        $("#showHideMap").click(function (){
+            offset = mapFullSize ? "-=140" : "+=140";
+            $("#navGmap").animate({
+                height: offset
+            }, animationTime, function() {
+                mapFullSize = !mapFullSize;
+                $("#mapResizeImage").attr("src", mapFullSize ? "/img/arrow-up.png" : "/img/arrow-down.png")
+            });
+
+            return false;
+        });
 
     });
 
@@ -58,7 +72,7 @@
                     %{--<input name="query" type="text" class="search-query" placeholder="Search"/>--}%
                 %{--</form>--}%
             %{--</div>--}%
-        <div id="showHideMap"><img src="/img/arrow-up.png" alt="Smanji mapu"></div>
+        <div id="showHideMap"><a href="#"><img id="mapResizeImage" src="/img/arrow-up.png" alt="Smanji mapu"></a></div>
         <div id="navGmap"></div>
     </div>
 
