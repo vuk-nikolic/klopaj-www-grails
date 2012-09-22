@@ -1,7 +1,7 @@
 <g:javascript>
 
     var zoomSize = 18; // default zoom size for maps
-
+    var page = 1;
     /**
      * Shows all poi items (fromServer) on google map
      * @param fromServer
@@ -50,7 +50,6 @@
 
     (function () {
         var loading = false;
-        var page = 1;
 
         function nearBottomOfPage() {
             return $(window).scrollTop() > $(document).height() - $(window).height() - 200;
@@ -66,8 +65,8 @@
                 page++;
                 $.ajax({
                     type:"GET",
-                    url:"/home/moreActivities",
-                    data:"page=" + page
+                    url: getMoreActivitiesUrl(),
+                    data: getMoreActivitiesParams()
                 }).done(function (msg) {
                             $("#loadingContainer").hide();
                             $(msg).insertBefore($("#loadingContainer"));

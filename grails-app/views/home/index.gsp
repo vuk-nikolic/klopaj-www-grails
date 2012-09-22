@@ -5,6 +5,17 @@
     <title>klopaj.com newsfeed</title>
 </head>
 
+<g:javascript>
+      function getMoreActivitiesUrl() {
+          // home index.gsp
+          return "/home/moreActivities"
+      }
+
+    function getMoreActivitiesParams() {
+        return "page=" + page;
+    }
+</g:javascript>
+
 <body>
 <div class="row-fluid">
 

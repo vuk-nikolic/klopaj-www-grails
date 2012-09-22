@@ -20,7 +20,7 @@
                         <g:else>
                             Komentarisala
                         </g:else>
-                        restoran <g:link controller="poi" action="show"
+                        restoran <g:link controller="poi" action="index"
                                          id="${activity.poiId}">${activity.poiName}</g:link>
                     </div>
 
@@ -36,7 +36,7 @@
                         <g:else>
                             Ne voli
                         </g:else>
-                        restoran <g:link controller="poi" action="show"
+                        restoran <g:link controller="poi" action="index"
                                          id="${activity.poiId}">${activity.poiName}</g:link>
                     </span>
                     <span class="span2 newsfeed-row-image">
@@ -56,7 +56,7 @@
                         <g:else>
                             Poslala
                         </g:else>
-                        sliku za restoran <g:link controller="poi" action="show"
+                        sliku za restoran <g:link controller="poi" action="index"
                                                   id="${activity.poiId}">${activity.poiName}</g:link>
                     </span>
                     <span class="span2 newsfeed-row-image">
@@ -73,7 +73,7 @@
                         <g:else>
                             Promenila
                         </g:else>
-                        restoran <g:link controller="poi" action="show"
+                        restoran <g:link controller="poi" action="index"
                                          id="${activity.poiId}">${activity.poiName}</g:link>
                     </span>
                     <span class="span2 newsfeed-row-image">

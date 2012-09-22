@@ -8,6 +8,10 @@ class UrlMappings {
 		}
 
         "/"(controller: 'home', action: 'index')
-		"500"(view:'/error')
+
+        // This "/r" is a legacy mapping, so we won't lose everything @google
+        "/r/$id"(controller: 'poi', action: 'index')
+
+        "500"(view:'/error')
 	}
 }
