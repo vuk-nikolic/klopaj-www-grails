@@ -83,7 +83,7 @@
             </span>
         </div>
 
-        <div class="row-fluid newsfeed-row-datetime" style="text-align:right">
+        <div class="row-fluid newsfeed-row-datetime">
             <prettytime:display date="${activity.datetime}"/>
         </div>
     </div>
