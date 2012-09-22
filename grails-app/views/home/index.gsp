@@ -18,21 +18,7 @@
     </div>
 
     <div class="span4">
-        <div class="well">
-            <div class="row-fluid sidebar-header">
-                Omiljeni restorani
-            </div>
-            <g:each var="highRatedPoi" in="${highestRatedPois}">
-                <g:render template="/layouts/sidebar-template" model="['poi': highRatedPoi[0]]" />
-            </g:each>
-
-            <div class="row-fluid sidebar-header">
-                Izdvajamo...
-            </div>
-            <g:each var="featuredPoi" in="${featuredPois}">
-                <g:render template="/layouts/sidebar-template" model="['poi':featuredPoi]" />
-            </g:each>
-        </div>
+        <g:render template="/layouts/sidebar-template" model="['highestRatedPois': highestRatedPois, 'featuredPois': featuredPois]" />
     </div>
 </div>
 </body>
