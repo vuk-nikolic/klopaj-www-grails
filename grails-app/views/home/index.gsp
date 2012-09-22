@@ -23,34 +23,14 @@
                 Omiljeni restorani
             </div>
             <g:each var="highRatedPoi" in="${highestRatedPois}">
-                <div class="row-fluid sidebar-row">
-                    <span class="span2 sidebar-row-image"><img src="/img/poi-type-national.png" alt="Nacionalni"></span>
-                    <span class="span10 sidebar-row-text-content">
-                        <span class="row-fluid sidebar-row-title">
-                            ${highRatedPoi[0].name}
-                        </span>
-                        <span class="row-fluid sidebar-row-detail">
-                            ${highRatedPoi[0].address}
-                        </span>
-                    </span>
-                </div>
+                <g:render template="/layouts/sidebar-template" model="['poi': highRatedPoi[0]]" />
             </g:each>
 
             <div class="row-fluid sidebar-header">
                 Izdvajamo...
             </div>
             <g:each var="featuredPoi" in="${featuredPois}">
-                <div class="row-fluid sidebar-row">
-                    <span class="span2 sidebar-row-image"><img src="/img/poi-type-national.png" alt="Nacionalni"></span>
-                    <span class="span10 sidebar-row-text-content">
-                        <span class="row-fluid sidebar-row-title">
-                            ${featuredPoi.name}
-                        </span>
-                        <span class="row-fluid sidebar-row-detail">
-                            ${featuredPoi.address}
-                        </span>
-                    </span>
-                </div>
+                <g:render template="/layouts/sidebar-template" model="['poi':featuredPoi]" />
             </g:each>
         </div>
     </div>
