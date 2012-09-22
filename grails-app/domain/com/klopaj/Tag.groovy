@@ -28,6 +28,7 @@ class Tag {
 
     @Audited String description
     @Audited String imageUrl
+    @Audited String iconFileName
     @Audited Date datetime
     Integer version
     @Audited String tagType
@@ -42,6 +43,7 @@ class Tag {
         name(size: 1..255, blank: false)
         description(size: 0..2000)
         imageUrl(size: 0..255)
+        iconFileName(size: 0..255)
         datetime()
         version(max: 2147483647)
         tagType(size: 1..45, blank: false)
