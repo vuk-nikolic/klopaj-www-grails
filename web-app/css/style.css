@@ -86,7 +86,7 @@ body {
     background-attachment: inherit;
     padding-top: 10px;
     height: 40px;
-    margin-left:1px !important;
+    margin-left: 1px !important;
 }
 
 .map-nav-cuisine a, .map-nav-extra a {
@@ -104,7 +104,7 @@ body {
     background-color: rgb(255, 255, 255);
     width: 730px;
     top: -10px;
-    padding-left:10px;
+    padding-left: 10px;
 }
 
 #searchForm {
@@ -113,7 +113,7 @@ body {
 }
 
 .map-nav {
-    padding-left:10px;
+    padding-left: 10px;
     padding-top: 10px;
     text-transform: uppercase;
 }
@@ -205,4 +205,10 @@ body {
 
 .sidebar-row-title {
     font-weight: bolder;
+}
+
+/* Poi/Tag page */
+.middle-content {
+    border-left: 1px solid #DAD3CC;
+    padding-left:12px;
 }

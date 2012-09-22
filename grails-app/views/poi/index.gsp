@@ -19,7 +19,7 @@
 
     <div class="span8 main-content">
 
-        <div class="span4">
+        <div class="span3">
             <b>${poi.name}</b>
             <ul class="unstyled">
                 <li>${poi.address}</li>
@@ -30,7 +30,7 @@
                 <li>${poi.contactWww}</li>
             </ul>
         </div>
-        <div class="span8">
+        <div class="span9 middle-content">
             <div class="row-fluid newsfeed-header">
                 Najnovija dešavanja
             </div>
