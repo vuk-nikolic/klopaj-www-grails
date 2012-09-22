@@ -181,7 +181,7 @@ class SqlPoiService implements PoiService {
     }
 
     def getLatestPoiActivities(Poi poi, int page) {
-        return UserContent.findAll(poi.getId().toString(), [offset: calculateOffset(page), max: PAGE_SIZE]);
+        return UserContent.findAllByIdLike("poi-" + poi.getId() + "-%", [offset: calculateOffset(page), max: PAGE_SIZE]);
     }
 
     /**
