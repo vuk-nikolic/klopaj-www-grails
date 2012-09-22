@@ -5,6 +5,9 @@
 package com.klopaj
 
 class PoiTagLib {
+    /**
+     * poiTagIcon renders the whole img tag for Poi. It uses Poi's tags, and uses first "FOOD" tag type and renders it.
+     */
     def poiTagIcon = { attrs ->
         Poi poi = attrs.poi
         Collection tags = poi.getTags()
