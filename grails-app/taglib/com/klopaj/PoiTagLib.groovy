@@ -20,13 +20,13 @@ class PoiTagLib {
 
             if (null != tag) {
                 def altText = tag.name ? tag.name : ""
-                            out << "<img src=\"/img/poi-type-national.png\" alt=" + altText + ">"
+                out << "<img src=\"/img/poi-type-national.png\" alt=" + altText + ">"
             } else {
-                out << "Nada :("
+                out << "<img src=\"/img/unlike.png\" >"
             }
 
         } else {
-            out << "Nada :("
+            out << "<img src=\"/img/unlike.png\" >"
         }
 
     }
