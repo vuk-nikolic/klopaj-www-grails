@@ -55,6 +55,8 @@
             <div class="row-fluid newsfeed-header">
                 Najnovija dešavanja
             </div>
+
+            <g:render template="/layouts/newsfeed-empty" bean="${activities}"/>
             <g:render template="/layouts/newsfeed-template" bean="${activities}"/>
             <div id="loadingContainer"><img src="/img/loading_wheel_small.gif" title="Samo sekund, učitavamo"/></div>
 
