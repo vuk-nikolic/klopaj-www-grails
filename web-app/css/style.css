@@ -161,7 +161,14 @@ body {
 
     -webkit-border-radius: 6px 6px 6px 6px;
     -moz-border-radius: 6px 6px 6px 6px;
-    border-radius: 6px 6px 6px 6px
+    border-radius: 6px 6px 6px 6px;
+
+    border: 1px solid #BDB9B3;
+}
+
+.newsfeed-row-comment:hover {
+    background-color: #F9F8F6;
+    border: 1px solid #BDB9B3;
 }
 
 .newsfeed-row-datetime {
