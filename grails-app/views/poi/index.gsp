@@ -29,6 +29,17 @@
                 <li>${poi.contactFax}</li>
                 <li>${poi.contactWww}</li>
             </ul>
+
+            <div class="row-fluid">
+                <span class="span4">
+                    <img src="/img/like.png" alt="like" />
+                </span>
+                <span class="span2">0</span>
+                <span class="span4">
+                    <img src="/img/unlike.png" alt="like" />
+                </span>
+                <span class="span2">0</span>
+            </div>
         </div>
         <div class="span9 middle-content">
             <div class="row-fluid newsfeed-header">
