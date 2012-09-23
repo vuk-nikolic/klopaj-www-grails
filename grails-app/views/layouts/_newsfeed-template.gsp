@@ -1,11 +1,11 @@
 <g:each var="activity" in="${activities}">
     <div class="row-fluid newsfeed-row">
         <div class="row-fluid">
-            <span class="span2">
-                <div class="row-fluid">
-                    <g:link controller="user" action="show" id="${activity.poiId}">${activity.username}</g:link>
-                </div>
+            <g:link controller="user" action="show" id="${activity.poiId}">${activity.username}</g:link>
+        </div>
 
+        <div class="row-fluid">
+            <span class="span2">
                 <div class="row-fluid">
                     <img src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05366bc.jpg?s=48&d=identicon"
                          alt="${activity.username}">
@@ -63,7 +63,7 @@
                         <img src="/img/plus-12px.png" class="newsfeed-row-image-plus-overlay" alt="Povećaj">
                         <span class="image-placeholder">
                             <img src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05466bc.jpg?s=64&d=identicon"
-                                  alt="${activity.username}">
+                                 alt="${activity.username}">
                         </span>
                     </span>
                 </g:elseif>
@@ -86,7 +86,8 @@
         </div>
 
         <div class="row-fluid newsfeed-row-datetime">
-            <abbr class="timeago" title="<g:formatDate format="yyyy-MM-dd'T'HH:mm:ssZ'" date="${activity.datetime}"/>">${activity.datetime}</abbr>
+            <abbr class="timeago" title="<g:formatDate format="yyyy-MM-dd'T'HH:mm:ssZ'"
+                                                       date="${activity.datetime}"/>">${activity.datetime}</abbr>
         </div>
     </div>
 </g:each>
