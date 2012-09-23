@@ -19,29 +19,39 @@
 
     <div class="span8 main-content">
 
-        <div class="span3">
+        <div class="span4">
             <b>${poi.name}</b>
             <ul class="unstyled">
-                <li>${poi.address}</li>
-                <li>${poi.contactEmail}</li>
-                <li>${poi.contactTel1}</li>
-                <li>${poi.contactTel2}</li>
-                <li>${poi.contactFax}</li>
-                <li>${poi.contactWww}</li>
+                <li class="contact address">${poi.address}</li>
+                <li class="contact email">${poi.contactEmail}</li>
+                <li class="contact phone">${poi.contactTel1}</li>
+                <li class="contact phone">${poi.contactTel2}</li>
+                <li class="contact phone">${poi.contactFax}</li>
+                <li class="contact email"><a href="${poi.contactWww}" target="_blank">${poi.contactWww}</a></li>
             </ul>
-
+            <g:if test="${!poi.tags.isEmpty()}">
+                <b>Tagovi</b>
+                <ul class="unstyled">
+                    <g:each var="tag" in="${poi.tags}">
+                        <li class="contact tag"><g:link controller="tag" action="index"
+                                                        id="${tag.id}">${tag.name}</g:link></li>
+                    </g:each>
+                </ul>
+            </g:if>
             <div class="row-fluid">
-                <span class="span4">
-                    <img src="/img/like.png" alt="like" />
+                <span class="span4 like-inactive">
+                    <img src="/img/like.png" alt="like"/>
                 </span>
-                <span class="span2">0</span>
-                <span class="span4">
-                    <img src="/img/unlike.png" alt="like" />
+                <span class="span2 like-text">0</span>
+                <span class="span4 unlike-inactive">
+                    <img src="/img/unlike.png" alt="like"/>
                 </span>
-                <span class="span2">0</span>
+                <span class="span2 unlike-text">0</span>
             </div>
+
         </div>
-        <div class="span9 middle-content">
+
+        <div class="span8 middle-content">
             <div class="row-fluid newsfeed-header">
                 Najnovija dešavanja
             </div>
