@@ -61,8 +61,10 @@
                     </span>
                     <span class="span2 newsfeed-row-image">
                         <img src="/img/plus-12px.png" class="newsfeed-row-image-plus-overlay" alt="Povećaj">
-                        <img src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05466bc.jpg?s=64&d=identicon"
-                             alt="${activity.username}">
+                        <span class="image-placeholder">
+                            <img src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05466bc.jpg?s=64&d=identicon"
+                                  alt="${activity.username}">
+                        </span>
                     </span>
                 </g:elseif>
                 <g:elseif test="${activity.type == 'poi'}">
