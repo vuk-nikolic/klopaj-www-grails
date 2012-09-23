@@ -52,20 +52,22 @@
         </div>
 
         <div class="span8 middle-content">
-            <div class="row-fluid image-placeholder" style="padding-bottom:10px">
-                <span class="span3"><img
-                        src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                        alt="image placeholder"></span>
-                <span class="span3"><img
-                        src="http://www.gravatar.com/avatar/f83d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                        alt="image placeholder"></span>
-                <span class="span3"><img
-                        src="http://www.gravatar.com/avatar/f73d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                        alt="image placeholder"></span>
-                <span class="span3"><img
-                        src="http://www.gravatar.com/avatar/f63d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                        alt="image placeholder"></span>
-            </div>
+            <g:if test="${!poi.photos.isEmpty()}">
+                <div class="row-fluid image-placeholder" style="padding-bottom:10px">
+                    <span class="span3"><img
+                            src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                            alt="image placeholder"></span>
+                    <span class="span3"><img
+                            src="http://www.gravatar.com/avatar/f83d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                            alt="image placeholder"></span>
+                    <span class="span3"><img
+                            src="http://www.gravatar.com/avatar/f73d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                            alt="image placeholder"></span>
+                    <span class="span3"><img
+                            src="http://www.gravatar.com/avatar/f63d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                            alt="image placeholder"></span>
+                </div>
+            </g:if>
 
             <g:render template="/layouts/newsfeed-empty" bean="${activities}"/>
             <g:render template="/layouts/newsfeed-template" bean="${activities}"/>
