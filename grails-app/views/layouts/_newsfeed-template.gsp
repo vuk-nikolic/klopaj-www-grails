@@ -86,7 +86,7 @@
         </div>
 
         <div class="row-fluid newsfeed-row-datetime">
-            <prettytime:display date="${activity.datetime}"/>
+            <abbr class="timeago" title="<g:formatDate format="yyyy-MM-dd'T'HH:mm:ssZ'" date="${activity.datetime}"/>">${activity.datetime}</abbr>
         </div>
     </div>
 </g:each>

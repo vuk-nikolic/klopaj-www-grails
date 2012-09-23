@@ -25,7 +25,7 @@
             // has been received
             success:mapper.showSearchResults
         });
-
+        $("abbr.timeago").timeago();
         // create map after a small delay, so other parts of the page can be loaded
         setTimer(500, function () {
             mapper.boundarySearch();
