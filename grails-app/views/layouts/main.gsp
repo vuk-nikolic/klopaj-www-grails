@@ -16,9 +16,11 @@
     <!-- Following stylesheet is for Din Display Pro Regular font -->
     <link rel="stylesheet" href="http://f.fontdeck.com/s/css/uH5+KWQnibDTJRYggGJ9XZLTAgw/localhost/23906.css" type="text/css" />
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'lightbox.css')}" type="text/css" media="screen" />
     <script type="text/javascript" src="${resource(dir: 'js', file: 'thirdparty/jquery/jquery.form.js')}"></script>
     <script type="text/javascript" src="${resource(dir: 'js', file: 'thirdparty/jquery/jquery.timeago.js')}"></script>
     <script type="text/javascript" src="${resource(dir: 'js', file: 'thirdparty/jquery/jquery.timeago.rs.js')}"></script>
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'thirdparty/jquery/jquery.lightbox.js')}"></script>
     <script type="text/javascript" src="${resource(dir: 'js', file: 'domain/poi.js')}"></script>
     <script type="text/javascript" src="${resource(dir: 'js', file: 'application.js')}"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>

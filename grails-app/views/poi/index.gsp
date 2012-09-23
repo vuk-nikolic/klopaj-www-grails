@@ -54,18 +54,42 @@
         <div class="span8 middle-content">
             <g:if test="${!poi.photos.isEmpty()}">
                 <div class="row-fluid image-placeholder" style="padding-bottom:10px">
-                    <span class="span3"><img
-                            src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                            alt="image placeholder"></span>
-                    <span class="span3"><img
-                            src="http://www.gravatar.com/avatar/f83d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                            alt="image placeholder"></span>
-                    <span class="span3"><img
-                            src="http://www.gravatar.com/avatar/f73d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                            alt="image placeholder"></span>
-                    <span class="span3"><img
-                            src="http://www.gravatar.com/avatar/f63d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
-                            alt="image placeholder"></span>
+                    <span class="span3">
+                        <a href="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05366bc.jpg?s=512&d=identicon"
+                           title="test 1" class="lightbox" rel="roadtrip">
+                            <img
+                                    src="http://www.gravatar.com/avatar/f93d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                                    alt="image placeholder">
+                        </a>
+                    </span>
+                    <span class="span3">
+                        <a href="http://www.gravatar.com/avatar/e93d4ba3c5de9f2f82074792c05366bc.jpg?s=512&d=identicon"
+                           title="test 2" class="lightbox" rel="roadtrip">
+                            <img
+                                    src="http://www.gravatar.com/avatar/e93d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                                    alt="image placeholder">
+                        </a>
+                    </span>
+                    <span class="span3">
+                        <a href="http://www.gravatar.com/avatar/d93d4ba3c5de9f2f82074792c05366bc.jpg?s=512&d=identicon"
+                           title="test 3" class="lightbox" rel="roadtrip">
+                            <img
+                                    src="http://www.gravatar.com/avatar/d93d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                                    alt="image placeholder">
+                        </a>
+                    </span>
+                    <span class="span3">
+                        <a href="http://www.gravatar.com/avatar/c93d4ba3c5de9f2f82074792c05366bc.jpg?s=512&d=identicon"
+                           title="test 4" class="lightbox" rel="roadtrip">
+                            <img
+                                    src="http://www.gravatar.com/avatar/c93d4ba3c5de9f2f82074792c05366bc.jpg?s=64&d=identicon"
+                                    alt="image placeholder">
+                        </a>
+                    </span>
+
+                    <a href="http://www.gravatar.com/avatar/b93d4ba3c5de9f2f82074792c05366bc.jpg?s=512&d=identicon"
+                                               title="test 5" class="lightbox" rel="roadtrip" style="display:none">
+                                            </a>
                 </div>
             </g:if>
 

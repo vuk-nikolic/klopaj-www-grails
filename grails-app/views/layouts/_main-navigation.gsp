@@ -25,7 +25,12 @@
             // has been received
             success:mapper.showSearchResults
         });
+
         $("abbr.timeago").timeago();
+        $(".lightbox").lightbox({
+            fitToScreen:true,
+            imageClickClose:false
+        });
         // create map after a small delay, so other parts of the page can be loaded
         setTimer(500, function () {
             mapper.boundarySearch();
@@ -65,8 +70,8 @@
                 page++;
                 $.ajax({
                     type:"GET",
-                    url: getMoreActivitiesUrl(),
-                    data: getMoreActivitiesParams()
+                    url:getMoreActivitiesUrl(),
+                    data:getMoreActivitiesParams()
                 }).done(function (msg) {
                             $("#loadingContainer").hide();
                             $(msg).insertBefore($("#loadingContainer"));
@@ -78,13 +83,17 @@
 </g:javascript>
 <div class="row-fluid navigation-header">
     <div class="span1"></div>
+
     <div class="span2 offset1">
         <a class="brand" href="${createLink(uri: '/')}"><img src="/img/logo.jpg"></a>
         <img class="logo-divider" src="/img/logo-divider.png" alt=""/>
     </div>
+
     <div class="span6">
         <div class="row-fluid">
-            <div class="span2 offset8 nav-register"><a data-toggle="modal" href="#register-modal">Registruj se!</a></div>
+            <div class="span2 offset8 nav-register"><a data-toggle="modal" href="#register-modal">Registruj se!</a>
+            </div>
+
             <div class="span2 nav-login"><a data-toggle="modal" href="#login-modal">Prijavi se!</a></div>
         </div>
     </div>
@@ -98,13 +107,16 @@
     <div class="row-fluid" style="position: relative;">
         <div class="mapOverlay">
             <div class="span1 map-nav-cuisine"><a href="#">Kuhinje</a></div>
+
             <div class="span1 map-nav-extra"><a href="#">Dodaci</a></div>
+
             <div class="span10">
                 <form action="/search" id="searchForm" method="post" class="pull-right">
-                    <input name="query" type="text" placeholder="NAĐI RESTORAN..." />
+                    <input name="query" type="text" placeholder="NAĐI RESTORAN..."/>
                 </form>
             </div>
         </div>
+
         <div id="showHideMap"><a href="#"><img id="mapResizeImage" src="/img/arrow-up.png" alt="Smanji mapu"></a></div>
 
         <div id="navGmap"></div>
