@@ -5,7 +5,7 @@ import com.klopaj.User
 import com.klopaj.Vote
 import com.klopaj.FollowingUser
 
-interface UserService {
+interface UserServiceInterface {
 
     User getById(int userId)
     User getByUsername(String username)

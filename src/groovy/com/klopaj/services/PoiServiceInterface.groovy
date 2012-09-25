@@ -2,7 +2,7 @@ package com.klopaj.services
 
 import com.klopaj.*
 
-interface PoiService {
+interface PoiServiceInterface {
 
     // ---- Poi CRUD (without D :))
     Poi getById(int id)

@@ -1,5 +1,7 @@
 package com.klopaj
 
+import grails.converters.deep.JSON
+
 class PoiController {
     def poiService
 

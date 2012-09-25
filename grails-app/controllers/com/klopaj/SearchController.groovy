@@ -13,7 +13,7 @@ class SearchController {
     def searchService
 
     /**
-     * Searches for "params.query" string in database (lucene). It uses SearchService internally.<br />
+     * Searches for "params.query" string in database (lucene). It uses SearchServiceInterface internally.<br />
      * Searches by name, description, tag and address. Boosting included.
      * @return List of Poi items render as json (@see BootStrap.groovy how is Poi rendered JSON.registerObjectMarshaller(Poi))
      */

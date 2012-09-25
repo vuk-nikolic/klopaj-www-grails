@@ -4,10 +4,10 @@
 
 package com.klopaj.services.sql
 
-import com.klopaj.services.PoiService
+import com.klopaj.services.PoiServiceInterface
 import com.klopaj.*
 
-class SqlPoiService implements PoiService {
+class PoiService implements PoiServiceInterface {
     def springSecurityService
     Integer PAGE_SIZE = 8
 

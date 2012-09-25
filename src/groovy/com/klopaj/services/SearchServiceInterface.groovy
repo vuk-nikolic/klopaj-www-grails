@@ -5,9 +5,9 @@
 package com.klopaj.services
 
 /**
- * SearchService implements all search-related action for the application such as query string search as well as a map-boundary search.
+ * SearchServiceInterface implements all search-related action for the application such as query string search as well as a map-boundary search.
  */
-interface SearchService {
+interface SearchServiceInterface {
 
     def serbian2LatinConverter
 

@@ -4,13 +4,13 @@
 
 package com.klopaj.services.sql
 
-import com.klopaj.services.UserService
+import com.klopaj.services.UserServiceInterface
 import com.klopaj.User
 import com.klopaj.Favorite
 import com.klopaj.Vote
 import com.klopaj.FollowingUser
 
-class SqlUserService implements UserService {
+class UserService implements UserServiceInterface {
     def springSecurityService
 
     User getCurrentUser() {

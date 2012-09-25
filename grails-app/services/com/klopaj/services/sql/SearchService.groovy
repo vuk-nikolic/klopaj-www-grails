@@ -7,13 +7,14 @@ package com.klopaj.services.sql
 import org.apache.commons.lang.StringUtils
 import com.klopaj.Poi
 import org.codehaus.groovy.grails.plugins.hibernate.search.HibernateSearchQueryBuilder
-import com.klopaj.services.SearchService
+
 import com.klopaj.utils.Serbian2LatinConverter
+import com.klopaj.services.SearchServiceInterface
 
 /**
- * This implementation of SearchService uses database queries (mostly hibernate search).
+ * This implementation of SearchServiceInterface uses database queries (mostly hibernate search).
  */
-class SqlSearchService implements SearchService {
+class SearchService implements SearchServiceInterface {
 
 
 

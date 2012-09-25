@@ -10,8 +10,8 @@ import com.klopaj.Poi
 /**
  * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
  */
-@TestFor(SqlPoiService)
-class SqlPoiServiceTests {
+@TestFor(PoiService)
+class PoiServiceTests {
     def poiService
 
     void testAddPoi() {
