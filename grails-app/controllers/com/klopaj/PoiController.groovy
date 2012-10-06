@@ -46,7 +46,7 @@ class PoiController {
         Vote vote = poiService.vote(poiId, clientId, value)
 
         int ratePlus = poiService.calcVotes(poiId, true)
-        int rateMinus = poiService.calcVotes(poiId, true)
+        int rateMinus = poiService.calcVotes(poiId, false)
 
         withFormat {
             html { render(template: "/layouts/vote", model: [poiId: poiId, vote: vote, ratePlus: ratePlus, rateMinus: rateMinus]) }
