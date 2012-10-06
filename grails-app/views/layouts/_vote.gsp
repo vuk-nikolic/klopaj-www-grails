@@ -4,7 +4,7 @@
                   params="[value: '1']"
                   update="voteContainer">
 
-        <g:if test="${vote.voteValue.voteValueId == 1}">
+        <g:if test="${vote?.voteValue?.voteValueId == 1}">
             <span class="span4 like-active">
                 <img src="/img/like.png" alt="like"/>
             </span>
@@ -20,7 +20,7 @@
                   id="${poiId}"
                   params="[value: '-1']"
                   update="voteContainer">
-        <g:if test="${vote.voteValue.voteValueId == -1}">
+        <g:if test="${vote?.voteValue?.voteValueId == -1}">
             <span class="span4 unlike-active">
                 <img src="/img/unlike.png" alt="like"/>
             </span>
