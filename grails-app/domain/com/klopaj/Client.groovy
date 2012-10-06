@@ -20,6 +20,7 @@ class Client {
         id generator: 'identity', column: 'CLIENT_ID'
         name column: 'name'
     }
+    public static final String CLIENT_WEB_APP = "web"
     Integer version
     String name
 }

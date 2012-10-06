@@ -39,14 +39,7 @@
                 </ul>
             </g:if>
             <div class="row-fluid">
-                <span class="span4 like-inactive">
-                    <img src="/img/like.png" alt="like"/>
-                </span>
-                <span class="span2 like-text">0</span>
-                <span class="span4 unlike-inactive">
-                    <img src="/img/unlike.png" alt="like"/>
-                </span>
-                <span class="span2 unlike-text">0</span>
+                <g:render template="/layouts/vote" model="['poiId': poi.id, 'vote:': vote, 'ratePlus': ratePlus, 'rateMinus': rateMinus]" />
             </div>
 
         </div>

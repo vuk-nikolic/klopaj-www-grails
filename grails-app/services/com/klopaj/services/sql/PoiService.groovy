@@ -4,15 +4,25 @@
 
 package com.klopaj.services.sql
 
+import com.klopaj.Client
+import com.klopaj.Comment
+import com.klopaj.Favorite
+import com.klopaj.Photo
+import com.klopaj.Poi
+import com.klopaj.Tag
+import com.klopaj.User
+import com.klopaj.UserContent
+import com.klopaj.Vote
+import com.klopaj.VoteValue
 import com.klopaj.services.PoiServiceInterface
-import com.klopaj.*
 
 class PoiService implements PoiServiceInterface {
+    static transactional = true
     def springSecurityService
     Integer PAGE_SIZE = 8
 
     User getCurrentUser() {
-        return User.get(springSecurityService.principal.id)
+        return springSecurityService.currentUser as User
     }
 
     Poi getById(int id) {
@@ -28,52 +38,21 @@ class PoiService implements PoiServiceInterface {
         return poi.save() != null
     }
 
-    Vote voteUp(Poi poi, Client client) {
-        Vote vote = new Vote()
-        vote.poi = poi
-        vote.client = client
-        vote.user = getCurrentUser()
+    Vote vote(int poiId, int clientId, int value) {
+        Poi poi = Poi.findById(poiId)
 
-        VoteValue voteValue = VoteValue.findByVoteValueId((byte) 1)
-        vote.voteValue = voteValue
-
-        return vote.save()
-    }
-
-    Vote voteUp(int poiId, int clientId) {
-        Vote vote = new Vote()
-        vote.poi = Poi.findById(poiId)
+        Vote vote = findOrCreateVote(poiId, getCurrentUser())
         vote.client = Client.findById(clientId)
-        vote.user = getCurrentUser()
 
-        VoteValue voteValue = VoteValue.findByVoteValueId((byte) 1)
+        VoteValue voteValue = VoteValue.findByVoteValueId((byte) value)
         vote.voteValue = voteValue
 
-        return vote.save()
-    }
-
-    Vote voteDown(Poi poi, Client client) {
-        Vote vote = new Vote()
-        vote.poi = poi
-        vote.client = client
-        vote.user = getCurrentUser()
-
-        VoteValue voteValue = VoteValue.findByVoteValueId((byte) -1)
-        vote.voteValue = voteValue
-
-        return vote.save()
-    }
-
-    Vote voteDown(int poiId, int clientId) {
-        Vote vote = new Vote()
-        vote.poi = Poi.findById(poiId)
-        vote.client = Client.findById(clientId)
-        vote.user = getCurrentUser()
-
-        VoteValue voteValue = VoteValue.findByVoteValueId((byte) -1)
-        vote.voteValue = voteValue
-
-        return vote.save()
+        poi.addToVotes(vote)
+        poi.save()
+        if (!vote.save(flush: true)) {
+            println vote.errors
+        }
+        return vote
     }
 
     List<Vote> getVotes(Poi poi, int page) {
@@ -85,6 +64,26 @@ class PoiService implements PoiServiceInterface {
         // TODO: Maybe we should add paging here
         Poi poi = Poi.findById(poiId)
         return poi.getVotes()
+    }
+
+    /**
+     * Calculates all votes.
+     */
+    public int calcVotes(int poiId, boolean positive) {
+        int voteValueId = positive ? 1 : -1;
+        Poi poi = Poi.findById(poiId);
+        VoteValue voteValue = VoteValue.findByVoteValueId(voteValueId.byteValue());
+        def count = Vote.countByVoteValueAndPoi(voteValue, poi);
+        return count.intValue();
+    }
+
+    Vote findOrCreateVote(int poiId, User user) {
+        Poi poi = Poi.findById(poiId)
+        Vote vote = (Vote) Vote.findByPoiAndUser(poi, user);
+        if (vote == null) {
+            vote = new Vote([poi:poi, user:user, datetime: new Date()]);
+        }
+        return vote;
     }
 
     Favorite follow(Poi poi, Client client) {
@@ -188,11 +187,11 @@ class PoiService implements PoiServiceInterface {
      * Returns most commented pois.
      */
     def getMostCommentedPois(int count) {
-        return Poi.executeQuery("select comm.poi, count(comm.user) from Comment comm group by comm.poi order by count(comm.user) desc")}
+        return Poi.executeQuery("select comm.poi, count(comm.user) from Comment comm group by comm.poi order by count(comm.user) desc")
+    }
 
 
     def getHighestRatedPois(int page) {
-
         return Poi.executeQuery("select v.poi, count(*) from Vote v where v.voteValue.voteValueId=1 group by v.poi.id order by count(*) desc")
     }
 

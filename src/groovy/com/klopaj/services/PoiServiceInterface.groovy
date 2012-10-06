@@ -12,17 +12,15 @@ interface PoiServiceInterface {
     boolean updatePoi(Poi poi)
 
     // ----- Vote up/down
-    Vote voteUp(Poi poi, Client client)
-
-    Vote voteUp(int poiId, int clientId)
-
-    Vote voteDown(Poi poi, Client client)
-
-    Vote voteDown(int poiId, int clientId)
+    Vote vote(int poiId, int clientId, int value)
 
     List<Vote> getVotes(Poi poi, int page)
 
     List<Vote> getVotes(int poiId, int page)
+
+    int calcVotes(int poiId, boolean positive)
+
+    Vote findOrCreateVote(int poiId, User user)
 
     // ----- Follow/unfollow poi
     Favorite follow(Poi poi, Client client)
